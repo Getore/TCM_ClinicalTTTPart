@@ -1,6 +1,7 @@
 package com.bootdo.staff.service;
 
 import com.bootdo.staff.domain.StaffDO;
+import com.bootdo.staff.domain.StaffExcelExport;
 
 import java.util.List;
 import java.util.Map;
@@ -17,6 +18,8 @@ public interface StaffService {
 	StaffDO get(Integer id);
 	
 	List<StaffDO> list(Map<String, Object> map);
+
+	List<StaffExcelExport> excelList(Map<String, Object> map);
 	
 	int count(Map<String, Object> map);
 	

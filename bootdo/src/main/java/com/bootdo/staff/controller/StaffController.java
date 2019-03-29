@@ -1,8 +1,15 @@
 package com.bootdo.staff.controller;
 
+import java.io.OutputStream;
+import java.text.SimpleDateFormat;
+import java.util.Date;
+import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
+import com.bootdo.staff.domain.StaffExcelExport;
+import com.bootdo.staff.utils.ExcelExportUtils;
+import com.xuxueli.poi.excel.ExcelExportUtil;
 import org.apache.shiro.authz.annotation.RequiresPermissions;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.ui.Model;
@@ -20,6 +27,8 @@ import com.bootdo.staff.service.StaffService;
 import com.bootdo.common.utils.PageUtils;
 import com.bootdo.common.utils.Query;
 import com.bootdo.common.utils.R;
+
+import javax.servlet.http.HttpServletResponse;
 
 /**
  * 
@@ -52,6 +61,25 @@ public class StaffController {
 		PageUtils pageUtils = new PageUtils(staffList, total);
 		return pageUtils;
 	}
+
+	/**
+	 * excel文件导出
+	 *
+	 * @param params
+	 * @return
+	 */
+	@ResponseBody
+	@GetMapping("/excelList")
+	@RequiresPermissions("staff:staff:excelList")
+	public PageUtils excelList(@RequestParam Map<String, Object> params){
+		// 查询列表数据
+		Query query = new Query(params);
+		List<StaffExcelExport> staffExcelExportList = staffService.excelList(query);
+		int total = staffService.count(query);
+		PageUtils pageUtils = new PageUtils(staffExcelExportList, total);
+		return pageUtils;
+	}
+
 	
 	@GetMapping("/add")
 	@RequiresPermissions("staff:staff:add")
@@ -114,6 +142,31 @@ public class StaffController {
 		return R.ok();
 	}
 
+	/**
+	 * 导出 excel 文件
+	 *
+	 * @param response
+	 * @throws Exception
+	 */
+	@RequestMapping(value = "/exportExcel")
+    public void exportExcel(HttpServletResponse response/*, @RequestParam("lrsjEnd") String lrsjEnd, @RequestParam("lrsj") String lrsj*/) throws Exception{
+        SimpleDateFormat format = new SimpleDateFormat("yyyy-MM-dd");
+        String fileName = "员工日志表" + format.format(new Date().getTime()) + ".xls";
+        response.setContentType("application/ms-excel;charset=UTF-8");
+        response.setHeader("Content-Disposition", "attachment;fileanme=" + new String(fileName.getBytes(), "iso-8859-1"));
 
+        OutputStream outputStream = response.getOutputStream();
+        Map map = new HashMap();
+
+        try {
+            List<StaffExcelExport> excelList = staffService.excelList(map);
+			ExcelExportUtils.exportToFile(excelList, outputStream);
+        } catch (Exception e){
+        	System.out.println("未找到文件，可能去火星了！");
+//        	throw new Exception("文件去火星了！");
+        } finally {
+        	outputStream.close();
+        }
+    }
 	
 }

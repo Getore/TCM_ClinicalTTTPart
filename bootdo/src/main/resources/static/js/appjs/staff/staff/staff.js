@@ -167,3 +167,8 @@ function batchRemove() {
 
 	});
 }
+
+// 导出excel数据
+function exportData() {
+    document.location.href = prefix + "/exportExcel";
+}
