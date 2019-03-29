@@ -5,7 +5,6 @@ import com.bootdo.staff.domain.StaffDO;
 import java.util.List;
 import java.util.Map;
 
-import com.bootdo.staff.domain.StaffExcelExport;
 import org.apache.ibatis.annotations.Mapper;
 
 /**
@@ -21,7 +20,7 @@ public interface StaffDao {
 	
 	List<StaffDO> list(Map<String,Object> map);
 
-	List<StaffExcelExport> excelList(Map<String, Object> map);
+	List<StaffDO> excelList(Map<String, Object> map);
 	
 	int count(Map<String,Object> map);
 	

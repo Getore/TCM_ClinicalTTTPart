@@ -1,6 +1,5 @@
 package com.bootdo.staff.service.impl;
 
-import com.bootdo.staff.domain.StaffExcelExport;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -29,7 +28,7 @@ public class StaffServiceImpl implements StaffService {
 	}
 
 	@Override
-	public List<StaffExcelExport> excelList(Map<String, Object> map) {
+	public List<StaffDO> excelList(Map<String, Object> map) {
 		return staffDao.excelList(map);
 	}
 

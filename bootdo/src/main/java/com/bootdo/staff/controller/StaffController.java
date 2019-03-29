@@ -7,9 +7,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-import com.bootdo.staff.domain.StaffExcelExport;
 import com.bootdo.staff.utils.ExcelExportUtils;
-import com.xuxueli.poi.excel.ExcelExportUtil;
 import org.apache.shiro.authz.annotation.RequiresPermissions;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.ui.Model;
@@ -17,7 +15,6 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
@@ -65,20 +62,19 @@ public class StaffController {
 	/**
 	 * excel文件导出
 	 *
-	 * @param params
 	 * @return
 	 */
-	@ResponseBody
+/*	@ResponseBody
 	@GetMapping("/excelList")
 	@RequiresPermissions("staff:staff:excelList")
 	public PageUtils excelList(@RequestParam Map<String, Object> params){
 		// 查询列表数据
 		Query query = new Query(params);
-		List<StaffExcelExport> staffExcelExportList = staffService.excelList(query);
+		List<StaffDO> staffExcelExportList = staffService.excelList(query);
 		int total = staffService.count(query);
 		PageUtils pageUtils = new PageUtils(staffExcelExportList, total);
 		return pageUtils;
-	}
+	}*/
 
 	
 	@GetMapping("/add")
@@ -153,16 +149,17 @@ public class StaffController {
         SimpleDateFormat format = new SimpleDateFormat("yyyy-MM-dd");
         String fileName = "员工日志表" + format.format(new Date().getTime()) + ".xls";
         response.setContentType("application/ms-excel;charset=UTF-8");
-        response.setHeader("Content-Disposition", "attachment;fileanme=" + new String(fileName.getBytes(), "iso-8859-1"));
+        response.setHeader("Content-Disposition", "attachment;filename=" + new String(fileName.getBytes(), "iso-8859-1"));
 
         OutputStream outputStream = response.getOutputStream();
         Map map = new HashMap();
 
         try {
-            List<StaffExcelExport> excelList = staffService.excelList(map);
+            List<StaffDO> excelList = staffService.list(map);
 			ExcelExportUtils.exportToFile(excelList, outputStream);
         } catch (Exception e){
         	System.out.println("未找到文件，可能去火星了！");
+        	e.printStackTrace();
 //        	throw new Exception("文件去火星了！");
         } finally {
         	outputStream.close();
