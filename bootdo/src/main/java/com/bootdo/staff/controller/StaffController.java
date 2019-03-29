@@ -155,12 +155,11 @@ public class StaffController {
         Map map = new HashMap();
 
         try {
-            List<StaffDO> excelList = staffService.list(map);
+            List<StaffDO> excelList = staffService.excelList(map);
 			ExcelExportUtils.exportToFile(excelList, outputStream);
         } catch (Exception e){
-        	System.out.println("未找到文件，可能去火星了！");
-        	e.printStackTrace();
-//        	throw new Exception("文件去火星了！");
+//        	e.printStackTrace();
+        	throw new Exception("文件去火星了！");
         } finally {
         	outputStream.close();
         }
