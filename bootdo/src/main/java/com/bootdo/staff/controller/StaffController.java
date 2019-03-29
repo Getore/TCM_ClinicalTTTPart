@@ -155,7 +155,7 @@ public class StaffController {
         Map map = new HashMap();
 
         try {
-            List<StaffDO> excelList = staffService.excelList(map);
+            List<StaffDO> excelList = staffService.list(map);
 			ExcelExportUtils.exportToFile(excelList, outputStream);
         } catch (Exception e){
 //        	e.printStackTrace();
