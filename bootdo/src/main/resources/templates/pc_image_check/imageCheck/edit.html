@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html>
+<meta charset="utf-8">
+<head th:include="include :: header"></head>
+<body class="gray-bg">
+	<div class="wrapper wrapper-content ">
+		<div class="row">
+			<div class="col-sm-12">
+				<div class="ibox float-e-margins">
+					<div class="ibox-content">
+						<form class="form-horizontal m-t" id="signupForm">
+						<input id="id" name="id" th:value="${imageCheck.id}"  type="hidden">
+							<div class="form-group">	
+								<label class="col-sm-3 control-label">相片受理编号：</label>
+								<div class="col-sm-8">
+									<input id="acceptNo" name="acceptNo" th:value="${imageCheck.acceptNo}" class="form-control" type="text">
+								</div>
+							</div>
+														<div class="form-group">	
+								<label class="col-sm-3 control-label">上传客户端id：</label>
+								<div class="col-sm-8">
+									<input id="customId" name="customId" th:value="${imageCheck.customId}" class="form-control" type="text">
+								</div>
+							</div>
+														<div class="form-group">	
+								<label class="col-sm-3 control-label">上传照片的客户端ip：</label>
+								<div class="col-sm-8">
+									<input id="uploadIp" name="uploadIp" th:value="${imageCheck.uploadIp}" class="form-control" type="text">
+								</div>
+							</div>
+														<div class="form-group">	
+								<label class="col-sm-3 control-label">上传照片的时间：</label>
+								<div class="col-sm-8">
+									<input id="uploadTime" name="uploadTime" th:value="${imageCheck.uploadTime}" class="form-control" type="text">
+								</div>
+							</div>
+														<div class="form-group">	
+								<label class="col-sm-3 control-label">照片存放路径：</label>
+								<div class="col-sm-8">
+									<input id="imagePath" name="imagePath" th:value="${imageCheck.imagePath}" class="form-control" type="text">
+								</div>
+							</div>
+														<div class="form-group">	
+								<label class="col-sm-3 control-label">照片名称：</label>
+								<div class="col-sm-8">
+									<input id="imageName" name="imageName" th:value="${imageCheck.imageName}" class="form-control" type="text">
+								</div>
+							</div>
+														<div class="form-group">	
+								<label class="col-sm-3 control-label">照片大小：</label>
+								<div class="col-sm-8">
+									<input id="imageSize" name="imageSize" th:value="${imageCheck.imageSize}" class="form-control" type="text">
+								</div>
+							</div>
+														<div class="form-group">	
+								<label class="col-sm-3 control-label">特检标志(0-菲特检,1-特检)：</label>
+								<div class="col-sm-8">
+									<input id="imageSpecial" name="imageSpecial" th:value="${imageCheck.imageSpecial}" class="form-control" type="text">
+								</div>
+							</div>
+														<div class="form-group">	
+								<label class="col-sm-3 control-label">特检信息：</label>
+								<div class="col-sm-8">
+									<input id="specialMsg" name="specialMsg" th:value="${imageCheck.specialMsg}" class="form-control" type="text">
+								</div>
+							</div>
+														<div class="form-group">	
+								<label class="col-sm-3 control-label">所属检测标准的id：</label>
+								<div class="col-sm-8">
+									<input id="checkTypeId" name="checkTypeId" th:value="${imageCheck.checkTypeId}" class="form-control" type="text">
+								</div>
+							</div>
+														<div class="form-group">	
+								<label class="col-sm-3 control-label">：</label>
+								<div class="col-sm-8">
+									<input id="machineId" name="machineId" th:value="${imageCheck.machineId}" class="form-control" type="text">
+								</div>
+							</div>
+														<div class="form-group">	
+								<label class="col-sm-3 control-label">：</label>
+								<div class="col-sm-8">
+									<input id="machineCheckTime" name="machineCheckTime" th:value="${imageCheck.machineCheckTime}" class="form-control" type="text">
+								</div>
+							</div>
+														<div class="form-group">	
+								<label class="col-sm-3 control-label">：</label>
+								<div class="col-sm-8">
+									<input id="machineResult" name="machineResult" th:value="${imageCheck.machineResult}" class="form-control" type="text">
+								</div>
+							</div>
+														<div class="form-group">	
+								<label class="col-sm-3 control-label">：</label>
+								<div class="col-sm-8">
+									<input id="machineCheckValue" name="machineCheckValue" th:value="${imageCheck.machineCheckValue}" class="form-control" type="text">
+								</div>
+							</div>
+														<div class="form-group">	
+								<label class="col-sm-3 control-label">：</label>
+								<div class="col-sm-8">
+									<input id="machineResultMsg" name="machineResultMsg" th:value="${imageCheck.machineResultMsg}" class="form-control" type="text">
+								</div>
+							</div>
+														<div class="form-group">	
+								<label class="col-sm-3 control-label">人检id：</label>
+								<div class="col-sm-8">
+									<input id="userCheckId" name="userCheckId" th:value="${imageCheck.userCheckId}" class="form-control" type="text">
+								</div>
+							</div>
+														<div class="form-group">	
+								<label class="col-sm-3 control-label">人检开始时间：</label>
+								<div class="col-sm-8">
+									<input id="userCheckBegin" name="userCheckBegin" th:value="${imageCheck.userCheckBegin}" class="form-control" type="text">
+								</div>
+							</div>
+														<div class="form-group">	
+								<label class="col-sm-3 control-label">人检结束时间：</label>
+								<div class="col-sm-8">
+									<input id="userCheckEnd" name="userCheckEnd" th:value="${imageCheck.userCheckEnd}" class="form-control" type="text">
+								</div>
+							</div>
+														<div class="form-group">	
+								<label class="col-sm-3 control-label">人检结果(0-未处理,1-合格,2-不合格,3-严重不合格)：</label>
+								<div class="col-sm-8">
+									<input id="userResult" name="userResult" th:value="${imageCheck.userResult}" class="form-control" type="text">
+								</div>
+							</div>
+														<div class="form-group">	
+								<label class="col-sm-3 control-label">人检文字结果：</label>
+								<div class="col-sm-8">
+									<input id="userResultMsg" name="userResultMsg" th:value="${imageCheck.userResultMsg}" class="form-control" type="text">
+								</div>
+							</div>
+														<div class="form-group">	
+								<label class="col-sm-3 control-label">最终检测结果(0-未处理,1-合格,2-不合格,3-严重不合格)：</label>
+								<div class="col-sm-8">
+									<input id="finalResult" name="finalResult" th:value="${imageCheck.finalResult}" class="form-control" type="text">
+								</div>
+							</div>
+														<div class="form-group">	
+								<label class="col-sm-3 control-label">处理结果已达阶段(0-未处理,1-机检完,3-人检完)：</label>
+								<div class="col-sm-8">
+									<input id="dealStage" name="dealStage" th:value="${imageCheck.dealStage}" class="form-control" type="text">
+								</div>
+							</div>
+														<div class="form-group">	
+								<label class="col-sm-3 control-label">：</label>
+								<div class="col-sm-8">
+									<input id="createTime" name="createTime" th:value="${imageCheck.createTime}" class="form-control" type="text">
+								</div>
+							</div>
+														<div class="form-group">	
+								<label class="col-sm-3 control-label">：</label>
+								<div class="col-sm-8">
+									<input id="createUser" name="createUser" th:value="${imageCheck.createUser}" class="form-control" type="text">
+								</div>
+							</div>
+														<div class="form-group">	
+								<label class="col-sm-3 control-label">：</label>
+								<div class="col-sm-8">
+									<input id="updateTime" name="updateTime" th:value="${imageCheck.updateTime}" class="form-control" type="text">
+								</div>
+							</div>
+														<div class="form-group">	
+								<label class="col-sm-3 control-label">：</label>
+								<div class="col-sm-8">
+									<input id="updateUser" name="updateUser" th:value="${imageCheck.updateUser}" class="form-control" type="text">
+								</div>
+							</div>
+														<div class="form-group">	
+								<label class="col-sm-3 control-label">：</label>
+								<div class="col-sm-8">
+									<input id="remark" name="remark" th:value="${imageCheck.remark}" class="form-control" type="text">
+								</div>
+							</div>
+																					<div class="form-group">
+								<div class="col-sm-8 col-sm-offset-3">
+									<button type="submit" class="btn btn-primary">提交</button>
+								</div>
+							</div>
+						</form>
+					</div>
+				</div>
+			</div>
+	</div>
+	</div>
+	<div th:include="include::footer"></div>
+	<script type="text/javascript" src="/js/appjs/pc_image_check/imageCheck/edit.js">
+	</script>
+</body>
+</html>
