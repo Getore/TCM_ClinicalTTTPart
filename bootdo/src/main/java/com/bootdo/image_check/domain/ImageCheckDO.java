@@ -1,4 +1,4 @@
-package com.bootdo.pc_image_check.domain;
+package com.bootdo.image_check.domain;
 
 import java.io.Serializable;
 import java.util.Date;
@@ -10,7 +10,7 @@ import java.util.Date;
  * 
  * @author shenli
  * @email 1992lcg@163.com
- * @date 2019-04-01 14:51:38
+ * @date 2019-04-01 16:58:57
  */
 public class ImageCheckDO implements Serializable {
 	private static final long serialVersionUID = 1L;

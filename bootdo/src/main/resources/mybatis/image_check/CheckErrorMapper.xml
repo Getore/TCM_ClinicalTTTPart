@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.bootdo.image_check.dao.CheckErrorDao">
+
+	<select id="get" resultType="com.bootdo.image_check.domain.CheckErrorDO">
+		select `id`,`err_type`,`err_msg`,`create_time`,`remark` from image_check_error where id = #{value}
+	</select>
+
+	<select id="list" resultType="com.bootdo.image_check.domain.CheckErrorDO">
+		select `id`,`err_type`,`err_msg`,`create_time`,`remark` from image_check_error
+        <where>  
+		  		  <if test="id != null and id != ''"> and id = #{id} </if>
+		  		  <if test="errType != null and errType != ''"> and err_type = #{errType} </if>
+		  		  <if test="errMsg != null and errMsg != ''"> and err_msg = #{errMsg} </if>
+		  		  <if test="createTime != null and createTime != ''"> and create_time = #{createTime} </if>
+		  		  <if test="remark != null and remark != ''"> and remark = #{remark} </if>
+		  		</where>
+        <choose>
+            <when test="sort != null and sort.trim() != ''">
+                order by ${sort} ${order}
+            </when>
+			<otherwise>
+                order by id desc
+			</otherwise>
+        </choose>
+		<if test="offset != null and limit != null">
+			limit #{offset}, #{limit}
+		</if>
+	</select>
+	
+ 	<select id="count" resultType="int">
+		select count(*) from image_check_error
+		 <where>  
+		  		  <if test="id != null and id != ''"> and id = #{id} </if>
+		  		  <if test="errType != null and errType != ''"> and err_type = #{errType} </if>
+		  		  <if test="errMsg != null and errMsg != ''"> and err_msg = #{errMsg} </if>
+		  		  <if test="createTime != null and createTime != ''"> and create_time = #{createTime} </if>
+		  		  <if test="remark != null and remark != ''"> and remark = #{remark} </if>
+		  		</where>
+	</select>
+	 
+	<insert id="save" parameterType="com.bootdo.image_check.domain.CheckErrorDO">
+		insert into image_check_error
+		(
+			`id`, 
+			`err_type`, 
+			`err_msg`, 
+			`create_time`, 
+			`remark`
+		)
+		values
+		(
+			#{id}, 
+			#{errType}, 
+			#{errMsg}, 
+			#{createTime}, 
+			#{remark}
+		)
+	</insert>
+	 
+	<update id="update" parameterType="com.bootdo.image_check.domain.CheckErrorDO">
+		update image_check_error 
+		<set>
+			<if test="errType != null">`err_type` = #{errType}, </if>
+			<if test="errMsg != null">`err_msg` = #{errMsg}, </if>
+			<if test="createTime != null">`create_time` = #{createTime}, </if>
+			<if test="remark != null">`remark` = #{remark}</if>
+		</set>
+		where id = #{id}
+	</update>
+	
+	<delete id="remove">
+		delete from image_check_error where id = #{value}
+	</delete>
+	
+	<delete id="batchRemove">
+		delete from image_check_error where id in 
+		<foreach item="id" collection="array" open="(" separator="," close=")">
+			#{id}
+		</foreach>
+	</delete>
+
+</mapper>

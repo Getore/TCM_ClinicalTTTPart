@@ -1,5 +1,5 @@
 
-var prefix = "/pc_image_check/imageCheck"
+var prefix = "/image_check/checkError"
 $(function() {
 	load();
 });
@@ -49,129 +49,30 @@ function load() {
 								},
 								// 								{
 								// 	field : 'id',
-								// 	title : ' '
+								// 	title : ''
 								// },
-								{
-                                    // √
-									field : 'acceptNo', 
-									title : '相片受理编号' 
+																{
+									field : 'errType', 
+									title : '错误类型(01-头,02-脸,05-其他)' 
 								},
-								// 								{
-								// 	field : 'customId',
-								// 	title : '上传客户端id'
-								// },
-								// 								{
-								// 	field : 'uploadIp',
-								// 	title : '上传照片的客户端ip'
-								// },
+																{
+									field : 'errMsg', 
+									title : '错误信息' 
+								},
+																{
+									field : 'createTime', 
+									title : '' 
+								},
 								{
-									field : 'uploadTime', 
-									// title : '上传照片的时间'
-                                    title : '拍照时间'
+									field : 'remark', 
+									// title : '备注'
+                                    title : '错误出现次数'
                                 },
-								// 								{
-								// 	field : 'imagePath',
-								// 	title : '照片存放路径'
-								// },
-								{
-									// √
-									field : 'imageName', 
-									// title : '照片名称'
-                                    title : '照片'
-                                },
-								// 								{
-								// 	field : 'imageSize',
-								// 	title : '照片大小'
-								// },
-								// 								{
-								// 	field : 'imageSpecial',
-								// 	title : '特检标志(0-菲特检,1-特检)'
-								// },
-								// 								{
-								// 	field : 'specialMsg',
-								// 	title : '特检信息'
-								// },
-								// 								{
-								// 	field : 'checkTypeId',
-								// 	title : '所属检测标准的id'
-								// },
-								{
-                                    // √
-									field : 'machineId', 
-									title : '照相机id'
-								},
-								// 								{
-								// 	field : 'machineCheckTime',
-								// 	title : ''
-								// },
-								// 								{
-								// 	field : 'machineResult',
-								// 	title : ''
-								// },
-								// 								{
-								// 	field : 'machineCheckValue',
-								// 	title : ''
-								// },
-								// 								{
-								// 	field : 'machineResultMsg',
-								// 	title : ''
-								// },
-								{
-									// √
-									field : 'userCheckId', 
-									// title : '人检id'
-                                    title : '人检员'
-                                },
-								{
-									// √
-									field : 'userCheckBegin', 
-									title : '人检开始时间' 
-								},
-								{
-                                    // √
-									field : 'userCheckEnd', 
-									title : '人检结束时间' 
-								},
-								// 								{
-								// 	field : 'userResult',
-								// 	title : '人检结果(0-未处理,1-合格,2-不合格,3-严重不合格)'
-								// },
-								{
-									// √
-									field : 'userResultMsg', 
-									// title : '人检文字结果'
-                                    title : '照片不通过原因'
-								},
-								{
-                                    // √
-									field : 'finalResult', 
-									// title : '最终检测结果(0-未处理,1-合格,2-不合格,3-严重不合格)'
-                                    title : '检测结果'
-								},
-								// 								{
-								// 	field : 'dealStage',
-								// 	title : '处理结果已达阶段(0-未处理,1-机检完,3-人检完)'
-								// },
-								// 								{
-								// 	field : 'createTime',
-								// 	title : ''
-								// },
-								// 								{
-								// 	field : 'createUser',
-								// 	title : ''
-								// },
-								// 								{
-								// 	field : 'updateTime',
-								// 	title : ''
-								// },
-								// 								{
-								// 	field : 'updateUser',
-								// 	title : ''
-								// },
-								// 								{
-								// 	field : 'remark',
-								// 	title : ''
-								// },
+                            {
+                                field : 'id',
+                                // title : '备注'
+                                title : '错误占所有错误百分比'
+                            },
 																{
 									title : '操作',
 									field : 'id',

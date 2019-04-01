@@ -1,4 +1,4 @@
-package com.bootdo.pc_image_check.service.impl;
+package com.bootdo.image_check.service.impl;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -6,9 +6,9 @@ import org.springframework.stereotype.Service;
 import java.util.List;
 import java.util.Map;
 
-import com.bootdo.pc_image_check.dao.ImageCheckDao;
-import com.bootdo.pc_image_check.domain.ImageCheckDO;
-import com.bootdo.pc_image_check.service.ImageCheckService;
+import com.bootdo.image_check.dao.ImageCheckDao;
+import com.bootdo.image_check.domain.ImageCheckDO;
+import com.bootdo.image_check.service.ImageCheckService;
 
 
 

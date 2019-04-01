@@ -1,4 +1,4 @@
-package com.bootdo.pc_image_check.controller;
+package com.bootdo.image_check.controller;
 
 import java.util.List;
 import java.util.Map;
@@ -15,8 +15,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 
-import com.bootdo.pc_image_check.domain.ImageCheckDO;
-import com.bootdo.pc_image_check.service.ImageCheckService;
+import com.bootdo.image_check.domain.ImageCheckDO;
+import com.bootdo.image_check.service.ImageCheckService;
 import com.bootdo.common.utils.PageUtils;
 import com.bootdo.common.utils.Query;
 import com.bootdo.common.utils.R;
@@ -26,24 +26,24 @@ import com.bootdo.common.utils.R;
  * 
  * @author shenli
  * @email 1992lcg@163.com
- * @date 2019-04-01 14:51:38
+ * @date 2019-04-01 16:58:57
  */
  
 @Controller
-@RequestMapping("/pc_image_check/imageCheck")
+@RequestMapping("/image_check/imageCheck")
 public class ImageCheckController {
 	@Autowired
 	private ImageCheckService imageCheckService;
 	
 	@GetMapping()
-	@RequiresPermissions("pc_image_check:imageCheck:imageCheck")
+	@RequiresPermissions("image_check:imageCheck:imageCheck")
 	String ImageCheck(){
-	    return "pc_image_check/imageCheck/imageCheck";
+	    return "image_check/imageCheck/imageCheck";
 	}
 	
 	@ResponseBody
 	@GetMapping("/list")
-	@RequiresPermissions("pc_image_check:imageCheck:imageCheck")
+	@RequiresPermissions("image_check:imageCheck:imageCheck")
 	public PageUtils list(@RequestParam Map<String, Object> params){
 		//查询列表数据
         Query query = new Query(params);
@@ -54,17 +54,17 @@ public class ImageCheckController {
 	}
 	
 	@GetMapping("/add")
-	@RequiresPermissions("pc_image_check:imageCheck:add")
+	@RequiresPermissions("image_check:imageCheck:add")
 	String add(){
-	    return "pc_image_check/imageCheck/add";
+	    return "image_check/imageCheck/add";
 	}
 
 	@GetMapping("/edit/{id}")
-	@RequiresPermissions("pc_image_check:imageCheck:edit")
+	@RequiresPermissions("image_check:imageCheck:edit")
 	String edit(@PathVariable("id") Integer id,Model model){
 		ImageCheckDO imageCheck = imageCheckService.get(id);
 		model.addAttribute("imageCheck", imageCheck);
-	    return "pc_image_check/imageCheck/edit";
+	    return "image_check/imageCheck/edit";
 	}
 	
 	/**
@@ -72,7 +72,7 @@ public class ImageCheckController {
 	 */
 	@ResponseBody
 	@PostMapping("/save")
-	@RequiresPermissions("pc_image_check:imageCheck:add")
+	@RequiresPermissions("image_check:imageCheck:add")
 	public R save( ImageCheckDO imageCheck){
 		if(imageCheckService.save(imageCheck)>0){
 			return R.ok();
@@ -84,7 +84,7 @@ public class ImageCheckController {
 	 */
 	@ResponseBody
 	@RequestMapping("/update")
-	@RequiresPermissions("pc_image_check:imageCheck:edit")
+	@RequiresPermissions("image_check:imageCheck:edit")
 	public R update( ImageCheckDO imageCheck){
 		imageCheckService.update(imageCheck);
 		return R.ok();
@@ -95,7 +95,7 @@ public class ImageCheckController {
 	 */
 	@PostMapping( "/remove")
 	@ResponseBody
-	@RequiresPermissions("pc_image_check:imageCheck:remove")
+	@RequiresPermissions("image_check:imageCheck:remove")
 	public R remove( Integer id){
 		if(imageCheckService.remove(id)>0){
 		return R.ok();
@@ -108,7 +108,7 @@ public class ImageCheckController {
 	 */
 	@PostMapping( "/batchRemove")
 	@ResponseBody
-	@RequiresPermissions("pc_image_check:imageCheck:batchRemove")
+	@RequiresPermissions("image_check:imageCheck:batchRemove")
 	public R remove(@RequestParam("ids[]") Integer[] ids){
 		imageCheckService.batchRemove(ids);
 		return R.ok();

@@ -1,6 +1,6 @@
-package com.bootdo.pc_image_check.dao;
+package com.bootdo.image_check.dao;
 
-import com.bootdo.pc_image_check.domain.ImageCheckDO;
+import com.bootdo.image_check.domain.ImageCheckDO;
 
 import java.util.List;
 import java.util.Map;
@@ -11,7 +11,7 @@ import org.apache.ibatis.annotations.Mapper;
  * 
  * @author shenli
  * @email 1992lcg@163.com
- * @date 2019-04-01 14:51:38
+ * @date 2019-04-01 16:58:57
  */
 @Mapper
 public interface ImageCheckDao {
