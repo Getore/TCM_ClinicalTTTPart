@@ -7,8 +7,8 @@
 		<div class="col-sm-12">
 			<div class="ibox">
 				<div class="ibox-body">
-					<div class="fixed-table-toolbar">
-						<div class="columns pull-left">
+					<div class="row">
+						<!--<div class="columns pull-left">
 							<button shiro:hasPermission="image_check:checkError:add" type="button" class="btn  btn-primary" onclick="add()">
 								<i class="fa fa-plus" aria-hidden="true"></i>添加
 							</button>
@@ -16,9 +16,27 @@
 								onclick="batchRemove()">
 								<i class="fa fa-trash" aria-hidden="true"></i>删除
 							</button>
-						</div>
+						</div>-->
+						<!--<div class="row">
+							<div class="columns pull-left">
+								<div class="f-w">&lt;!&ndash; f-w 可以让“查询靠近查询条件”&ndash;&gt;
+									<div class="f" style="margin-right: 25px">
+										<label for="userCheckId" class="control-label" >检测员:</label>
+										<input type="text" class="form-control" id="userCheckId" name="userCheckId" style="max-width: 45%"/>
+									</div>
+									<div class="f" style="margin-right: 25px">
+										<label for="userCheckBegin" class="control-label">检测时间:</label>
+										<input type="text" class="form-control" id="userCheckBegin" name="userCheckBegin" style="max-width: 45%"/>-
+										<input type="text" class="form-control" id="userCheckEnd" name="userCheckEnd" style="max-width: 45%"/>
+									</div>
+								</div>
+								<div class="columns pull-right">
+									<button class="btn btn-success" onclick="reLoad()">查询</button>
+								</div>
+							</div>
+						</div>-->
 						<div>
-							<div style="display: inline">
+							<div class="f-w-sb">
 								<div class="f-w">
 									<div class="f" style="margin-right: 25px">
 										<label for="userCheckId" class="control-label" >检测员:</label>
@@ -30,7 +48,7 @@
 										<input type="text" class="form-control" id="userCheckEnd" name="userCheckEnd" style="max-width: 20%"/>
 									</div>
 								</div>
-								<div class="columns pull-right">
+								<div class="pull-right">
 									<button class="btn btn-success" onclick="reLoad()">查询</button>
 								</div>
 							</div>
