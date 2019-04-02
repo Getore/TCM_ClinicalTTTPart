@@ -32,7 +32,14 @@ function load() {
 							return {
 								//说明：传入后台的参数包括offset开始索引，limit步长，sort排序列，order：desc或者,以及所有列的键值对
 								limit: params.limit,
-								offset:params.offset
+								offset:params.offset,
+
+								// shenli - 这是准备条件项的东西
+                                userCheckId : $('#userCheckId').val(),
+                                machineId : $('#machineId').val(),
+                                userCheckBegin : $('#userCheckBegin').val(),
+                                userCheckEnd : $('#userCheckEnd').val()
+
 					           // name:$('#searchName').val(),
 					           // username:$('#searchName').val()
 							};
@@ -98,7 +105,7 @@ function load() {
                             {
                                 // √
                                 field : 'machineId',
-                                title : '照相机id'
+                                title : '照相机ID'
                             },
                             // 								{
                             // 	field : 'machineCheckTime',
@@ -120,19 +127,19 @@ function load() {
                                 // √
                                 field : 'userCheckId',
                                 // title : '人检id'
-                                title : '人检员'
+                                title : '检测员'
                             },
                             {
                                 // √
                                 field : 'userCheckBegin',
-                                // title : '人检开始时间'
-                                title : '检测员检测用时'
+                                title : '人检开始时间'
+                                // title : '检测员检测用时'
                             },
-                            // {
-                            //     // √
-                            // 	field : 'userCheckEnd',
-                            // 	title : '人检结束时间'
-                            // },
+                            {
+                                // √
+                            	field : 'userCheckEnd',
+                            	title : '人检结束时间'
+                            },
                             // 								{
                             // 	field : 'userResult',
                             // 	title : '人检结果(0-未处理,1-合格,2-不合格,3-严重不合格)'
