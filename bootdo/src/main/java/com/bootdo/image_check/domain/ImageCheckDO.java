@@ -14,13 +14,13 @@ import java.util.Date;
  */
 public class ImageCheckDO implements Serializable {
 	private static final long serialVersionUID = 1L;
-	
-	// 
+
+	//
 	private Integer id;
 	//相片受理编号
 	private String acceptNo;
 	//上传客户端id
-	private Integer customId;
+	private String customId;
 	//上传照片的客户端ip
 	private String uploadIp;
 	//上传照片的时间
@@ -73,13 +73,13 @@ public class ImageCheckDO implements Serializable {
 	private String remark;
 
 	/**
-	 * 设置： 
+	 * 设置：
 	 */
 	public void setId(Integer id) {
 		this.id = id;
 	}
 	/**
-	 * 获取： 
+	 * 获取：
 	 */
 	public Integer getId() {
 		return id;
@@ -99,13 +99,13 @@ public class ImageCheckDO implements Serializable {
 	/**
 	 * 设置：上传客户端id
 	 */
-	public void setCustomId(Integer customId) {
+	public void setCustomId(String customId) {
 		this.customId = customId;
 	}
 	/**
 	 * 获取：上传客户端id
 	 */
-	public Integer getCustomId() {
+	public String getCustomId() {
 		return customId;
 	}
 	/**
@@ -409,3 +409,4 @@ public class ImageCheckDO implements Serializable {
 		return remark;
 	}
 }
+
