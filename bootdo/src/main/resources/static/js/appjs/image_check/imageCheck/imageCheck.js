@@ -39,7 +39,8 @@ function load() {
                                 userCheckId : $('#userCheckId').val(),
                                 machineId : $('#machineId').val(),
                                 userCheckBegin : $('#userCheckBegin').val(),
-                                userCheckEnd : $('#userCheckEnd').val()
+                                userCheckEnd : $('#userCheckEnd').val(),
+                                finalResult : $('#finalResult').val()
 
 					           // name:$('#searchName').val(),
 					           // username:$('#searchName').val()
@@ -153,7 +154,20 @@ function load() {
                                 // √
                                 field : 'finalResult',
                                 // title : '最终检测结果(0-未处理,1-合格,2-不合格,3-严重不合格)'
-                                title : '检测结果'
+                                title : '检测结果',
+								formatter : function (value, row, index) {
+									var html = '';
+									if (value == 0){
+										html='未处理';
+									} else if (value == 1){
+                                        html='合格';
+									} else if (value == 2){
+                                        html='不合格';
+                                    } else if (value == 3){
+                                        html='严重不合格';
+                                    }
+									return html;
+                                }
                             },
                             {
                                 // √
