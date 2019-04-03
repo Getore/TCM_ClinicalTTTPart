@@ -409,4 +409,3 @@ public class ImageCheckDO implements Serializable {
 		return remark;
 	}
 }
-

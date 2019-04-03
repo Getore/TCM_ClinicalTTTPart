@@ -104,7 +104,7 @@ public class ImageCheckController {
 	}
 	
 	/**
-	 * 删除
+	 * 批量删除
 	 */
 	@PostMapping( "/batchRemove")
 	@ResponseBody
@@ -113,5 +113,6 @@ public class ImageCheckController {
 		imageCheckService.batchRemove(ids);
 		return R.ok();
 	}
-	
+
+
 }

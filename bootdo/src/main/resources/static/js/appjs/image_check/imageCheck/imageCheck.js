@@ -10,6 +10,7 @@ function load() {
 					{
 						method : 'get', // 服务器数据的请求方式 get or post
 						url : prefix + "/list", // 服务器数据的加载地址
+                        showFooter : true,
 					//	showRefresh : true,
 					//	showToggle : true,
 					//	showColumns : true,
@@ -51,9 +52,9 @@ function load() {
 						// sortOrder.
 						// 返回false将会终止请求
                         columns : [
-                            {
-                                checkbox : true
-                            },
+                            // {
+                            //     checkbox : true
+                            // },
                             // 								{
                             // 	field : 'id',
                             // 	title : ' '
@@ -61,7 +62,8 @@ function load() {
                             {
                                 // √
                                 field : 'acceptNo',
-                                title : '相片受理编号'
+                                title : '相片受理编号',
+								footerFormatter: '平均用时(单位：秒):'
                             },
                             // 								{
                             // 	field : 'customId',
@@ -83,8 +85,7 @@ function load() {
                             {
                                 // √
                                 field : 'imageName',
-                                // title : '照片名称'
-                                title : '照片'
+                                title : '照片名称'
                             },
                             // 								{
                             // 	field : 'imageSize',
@@ -105,7 +106,7 @@ function load() {
                             {
                                 // √
                                 field : 'machineId',
-                                title : '照相机ID'
+                                title : '设备号'
                             },
                             // 								{
                             // 	field : 'machineCheckTime',
@@ -129,16 +130,20 @@ function load() {
                                 // title : '人检id'
                                 title : '检测员'
                             },
+                            // {
+                            //     // √
+                            //     field : 'userCheckBegin',
+                            //     title : '人检开始时间'
+                            //     // title : '检测员检测用时'
+                            // },
+                            // {
+                            //     // √
+                            // 	field : 'userCheckEnd',
+                            // 	title : '人检结束时间'
+                            // },
                             {
-                                // √
-                                field : 'userCheckBegin',
-                                title : '人检开始时间'
-                                // title : '检测员检测用时'
-                            },
-                            {
-                                // √
-                            	field : 'userCheckEnd',
-                            	title : '人检结束时间'
+                                title : '检测员检测用时(单位：秒)',
+                                field : 'id'
                             },
                             // 								{
                             // 	field : 'userResult',
@@ -146,16 +151,17 @@ function load() {
                             // },
                             {
                                 // √
-                                field : 'userResultMsg',
-                                // title : '人检文字结果'
-                                title : '照片不通过原因'
-                            },
-                            {
-                                // √
                                 field : 'finalResult',
                                 // title : '最终检测结果(0-未处理,1-合格,2-不合格,3-严重不合格)'
                                 title : '检测结果'
                             },
+                            {
+                                // √
+                                field : 'userResultMsg',
+                                // title : '人检文字结果'
+                                title : '照片不通过原因'
+                            }
+
                             // 								{
                             // 	field : 'dealStage',
                             // 	title : '处理结果已达阶段(0-未处理,1-机检完,3-人检完)'
@@ -180,7 +186,7 @@ function load() {
                             // 	field : 'remark',
                             // 	title : ''
                             // },
-                            {
+                            /*{
                                 title : '操作',
                                 field : 'id',
                                 align : 'center',
@@ -196,7 +202,9 @@ function load() {
                                         + '\')"><i class="fa fa-key"></i></a> ';
                                     return e + d ;
                                 }
-                            } ]
+                            }*/
+
+                            ]
 					});
 }
 function reLoad() {

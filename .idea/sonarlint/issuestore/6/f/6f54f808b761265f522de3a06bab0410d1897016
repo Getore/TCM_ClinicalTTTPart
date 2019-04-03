@@ -1,0 +1,7 @@
+
+xsquid:S1488:"aImmediately return this expression instead of assigning it to the temporary variable "pageUtils".(öêÂ
+nsquid:CommentedOutCodeLineF"<This block of commented-out lines of code should be removed.(ÇÊ†ôüÿÿÿÿ8‡¢½Àœ-
+fsquid:S00112”"FDefine and throw a dedicated exception instead of using a generic one.(—àñ£8—µà›œ-
+jsquid:CommentedOutCodeLine¡"<This block of commented-out lines of code should be removed.(†€éˆ8‰ ¨Âœ-
+ksquid:S00112¢"FDefine and throw a dedicated exception instead of using a generic one.(¼†İêùÿÿÿÿ8ÑÁÂœ-
+ksquid:S00100."NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(€¨ıèıÿÿÿÿ
