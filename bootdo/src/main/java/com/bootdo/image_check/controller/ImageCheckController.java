@@ -45,9 +45,22 @@ public class ImageCheckController {
 	@GetMapping("/list")
 	@RequiresPermissions("image_check:imageCheck:imageCheck")
 	public PageUtils list(@RequestParam Map<String, Object> params){
-		//查询列表数据
+		// 查询列表数据
         Query query = new Query(params);
 		List<ImageCheckDO> imageCheckList = imageCheckService.list(query);
+		int total = imageCheckService.count(query);
+		PageUtils pageUtils = new PageUtils(imageCheckList, total);
+		return pageUtils;
+	}
+
+//	点击按钮从小到大排序
+	@ResponseBody
+	@GetMapping("/STOBlist")
+	@RequiresPermissions("image_check:imageCheck:imageCheck")
+	public PageUtils STOBlist(@RequestParam Map<String, Object> params){
+		// 点击按钮从小到大排序，查询列表数据
+		Query query = new Query(params);
+		List<ImageCheckDO> imageCheckList = imageCheckService.STOBlist(query);
 		int total = imageCheckService.count(query);
 		PageUtils pageUtils = new PageUtils(imageCheckList, total);
 		return pageUtils;

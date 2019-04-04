@@ -17,7 +17,9 @@ public interface ImageCheckService {
 	ImageCheckDO get(Integer id);
 	
 	List<ImageCheckDO> list(Map<String, Object> map);
-	
+
+	List<ImageCheckDO> STOBlist(Map<String, Object> map);
+
 	int count(Map<String, Object> map);
 	
 	int save(ImageCheckDO imageCheck);

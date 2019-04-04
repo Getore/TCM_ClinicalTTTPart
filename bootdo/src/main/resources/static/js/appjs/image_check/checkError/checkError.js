@@ -1,6 +1,9 @@
+// $.noConflict();	// 解决JS文件冲突问题，因为datepicker()方法冲突，可能导致某些JS不可用
 
 var prefix = "/image_check/checkError"
 $(function() {
+	$('#userCheckBegin').datepicker();
+    $('#userCheckEnd').datepicker();
 	load();
 });
 

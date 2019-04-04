@@ -1,7 +1,10 @@
+// $.noConflict();	// 解决JS文件冲突问题，因为datepicker()方法冲突，可能导致某些JS不可用
 
 var prefix = "/image_check/imageCheck"
 $(function() {
-	load();
+    load();		// 在这个文件中，load()需要在第一个，不然无法显示查询结果
+	$('#userCheckBegin').datepicker();
+    $('#userCheckEnd').datepicker();
 });
 
 function load() {
@@ -9,8 +12,8 @@ function load() {
 			.bootstrapTable(
 					{
 						method : 'get', // 服务器数据的请求方式 get or post
-						url : prefix + "/list", // 服务器数据的加载地址
-                        showFooter : true,
+						url : prefix + "/STOBlist", // 服务器数据的加载地址
+                        showFooter : true,		//
 					//	showRefresh : true,
 					//	showToggle : true,
 					//	showColumns : true,
@@ -225,6 +228,7 @@ function reLoad() {
 	$('#exampleTable').bootstrapTable('refresh');
 }
 function add() {
+    // 这里是open()方法表示重新打开一个窗口，也就是一个弹窗
 	layer.open({
 		type : 2,
 		title : '增加',
@@ -235,6 +239,7 @@ function add() {
 	});
 }
 function edit(id) {
+    // 这里是open()方法表示重新打开一个窗口，也就是一个弹窗
 	layer.open({
 		type : 2,
 		title : '编辑',
@@ -302,3 +307,8 @@ function batchRemove() {
 
 	});
 }
+
+/*
+function STOBlistData() {
+    document.location.href = prefix + "/STOBlist";
+}*/
