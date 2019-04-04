@@ -5,7 +5,7 @@ var prefix = "/image_check/imageCheck"
 // 入口:
 $(function() {
     // load();		// 在这个文件中，load()需要在第一个，不然无法显示查询结果
-    load000();
+    // load000();
 
 	$('#userCheckBegin').datepicker();
     $('#userCheckEnd').datepicker();
@@ -16,7 +16,7 @@ function load() {
 			.bootstrapTable(
 					{
 						method : 'get', // 服务器数据的请求方式 get or post
-						url : prefix + "/list", // 服务器数据的加载地址
+						url : prefix + "/BTOSlist", // 服务器数据的加载地址
                         showFooter : true,		//
 					//	showRefresh : true,
 					//	showToggle : true,

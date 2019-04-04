@@ -66,6 +66,19 @@ public class ImageCheckController {
 		PageUtils pageUtils = new PageUtils(imageCheckList, total);
 		return pageUtils;
 	}
+
+    //	点击按钮从大到小排序
+    @ResponseBody
+    @GetMapping("/BTOSlist")
+    @RequiresPermissions("image_check:imageCheck:imageCheck")
+    public PageUtils BTOSlist(@RequestParam Map<String, Object> params){
+        // 点击按钮从大到小排序，查询列表数据
+        Query query = new Query(params);
+        List<ImageCheckViewDO> imageCheckList = imageCheckService.BTOSlist(query);
+        int total = imageCheckService.count(query);
+        PageUtils pageUtils = new PageUtils(imageCheckList, total);
+        return pageUtils;
+    }
 	
 	@GetMapping("/add")
 	@RequiresPermissions("image_check:imageCheck:add")
