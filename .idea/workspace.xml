@@ -3,14 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="2ecc1949-5e37-422b-9af1-a6bf59fbc363" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bootdo/src/main/java/com/bootdo/image_check/controller/ImageCheckController.java" beforeDir="false" afterPath="$PROJECT_DIR$/bootdo/src/main/java/com/bootdo/image_check/controller/ImageCheckController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bootdo/src/main/java/com/bootdo/image_check/dao/ImageCheckDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/bootdo/src/main/java/com/bootdo/image_check/dao/ImageCheckDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bootdo/src/main/java/com/bootdo/image_check/service/ImageCheckService.java" beforeDir="false" afterPath="$PROJECT_DIR$/bootdo/src/main/java/com/bootdo/image_check/service/ImageCheckService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bootdo/src/main/java/com/bootdo/image_check/service/impl/ImageCheckServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/bootdo/src/main/java/com/bootdo/image_check/service/impl/ImageCheckServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bootdo/src/main/resources/mybatis/image_check/ImageCheckMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/bootdo/src/main/resources/mybatis/image_check/ImageCheckMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bootdo/src/main/resources/static/js/appjs/image_check/checkError/checkError.js" beforeDir="false" afterPath="$PROJECT_DIR$/bootdo/src/main/resources/static/js/appjs/image_check/checkError/checkError.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/bootdo/src/main/resources/static/js/appjs/image_check/imageCheck/imageCheck.js" beforeDir="false" afterPath="$PROJECT_DIR$/bootdo/src/main/resources/static/js/appjs/image_check/imageCheck/imageCheck.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bootdo/src/main/resources/templates/image_check/checkError/checkError.html" beforeDir="false" afterPath="$PROJECT_DIR$/bootdo/src/main/resources/templates/image_check/checkError/checkError.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/bootdo/src/main/resources/templates/image_check/imageCheck/imageCheck.html" beforeDir="false" afterPath="$PROJECT_DIR$/bootdo/src/main/resources/templates/image_check/imageCheck/imageCheck.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/bootdo/src/main/resources/templates/include.html" beforeDir="false" afterPath="$PROJECT_DIR$/bootdo/src/main/resources/templates/include.html" afterDir="false" />
     </list>
@@ -57,19 +50,19 @@
     <session id="-1319983793">
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="html" value="212" />
+          <entry key="html" value="251" />
           <entry key="java" value="92" />
-          <entry key="js" value="600" />
-          <entry key="txt" value="105" />
+          <entry key="js" value="606" />
+          <entry key="txt" value="132" />
           <entry key="xml" value="65" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="HTML" value="212" />
+          <entry key="HTML" value="251" />
           <entry key="JAVA" value="92" />
-          <entry key="JavaScript" value="600" />
-          <entry key="PLAIN_TEXT" value="105" />
+          <entry key="JavaScript" value="606" />
+          <entry key="PLAIN_TEXT" value="132" />
           <entry key="SQL" value="2" />
           <entry key="XML" value="63" />
         </counts>
@@ -77,18 +70,18 @@
       <usages-collector id="statistics.file.extensions.open">
         <counts>
           <entry key="css" value="1" />
-          <entry key="html" value="9" />
-          <entry key="java" value="26" />
-          <entry key="js" value="25" />
+          <entry key="html" value="12" />
+          <entry key="java" value="28" />
+          <entry key="js" value="26" />
           <entry key="xml" value="3" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
           <entry key="CSS" value="1" />
-          <entry key="HTML" value="9" />
-          <entry key="JAVA" value="26" />
-          <entry key="JavaScript" value="25" />
+          <entry key="HTML" value="12" />
+          <entry key="JAVA" value="28" />
+          <entry key="JavaScript" value="26" />
           <entry key="XML" value="3" />
         </counts>
       </usages-collector>
@@ -112,98 +105,26 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/bootdo/src/main/resources/static/js/appjs/image_check/imageCheck/imageCheck.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-243">
-              <caret line="12" column="21" lean-forward="true" selection-start-line="12" selection-start-column="21" selection-end-line="12" selection-end-column="21" />
-              <folding>
-                <element signature="n#!!block;n#add#0" />
-                <element signature="n#!!block;n#edit#0" />
-                <element signature="n#!!block;n#remove#0" />
-                <element signature="n#!!block;n#resetPwd#0" />
-                <element signature="n#!!block;n#batchRemove#0" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/bootdo/src/main/resources/static/js/appjs/image_check/checkError/checkError.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="135">
-              <caret line="5" column="36" selection-start-line="5" selection-start-column="36" selection-end-line="5" selection-end-column="36" />
+            <state relative-caret-position="189">
+              <caret line="7" column="3" lean-forward="true" selection-start-line="7" selection-start-column="3" selection-end-line="7" selection-end-column="3" />
               <folding>
                 <element signature="n#!!block;n#load#0" />
-                <element signature="n#!!block;n#reLoad#0" />
+                <element signature="n#!!block;n#load#1" />
                 <element signature="n#!!block;n#add#0" />
                 <element signature="n#!!block;n#edit#0" />
                 <element signature="n#!!block;n#remove#0" />
                 <element signature="n#!!block;n#resetPwd#0" />
                 <element signature="n#!!block;n#batchRemove#0" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/bootdo/src/main/resources/mybatis/image_check/ImageCheckMapper.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="108">
-              <caret line="9" column="20" selection-start-line="9" selection-start-column="16" selection-end-line="9" selection-end-column="20" />
-              <folding>
-                <element signature="n#select#0;n#mapper#0;n#!!top" />
-                <element signature="n#select#1;n#mapper#0;n#!!top" />
-                <element signature="n#select#2;n#mapper#0;n#!!top" />
-                <element signature="n#insert#0;n#mapper#0;n#!!top" />
-                <element signature="n#update#0;n#mapper#0;n#!!top" />
-                <element signature="n#delete#0;n#mapper#0;n#!!top" />
-                <element signature="n#delete#1;n#mapper#0;n#!!top" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/bootdo/src/main/java/com/bootdo/image_check/service/ImageCheckService.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="103">
-              <caret line="20" column="46" lean-forward="true" selection-start-line="20" selection-start-column="46" selection-end-line="20" selection-end-column="46" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/bootdo/src/main/resources/templates/image_check/checkError/checkError.html">
+        <entry file="file://$PROJECT_DIR$/bootdo/src/main/resources/templates/include.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="299">
-              <caret line="32" column="90" selection-start-line="32" selection-start-column="90" selection-end-line="32" selection-end-column="90" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/bootdo/src/main/java/com/bootdo/image_check/service/impl/ImageCheckServiceImpl.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="345">
-              <caret line="31" column="43" lean-forward="true" selection-start-line="31" selection-start-column="43" selection-end-line="31" selection-end-column="43" />
-              <folding>
-                <element signature="e#643#644#0" expanded="true" />
-                <element signature="e#680#681#0" expanded="true" />
-                <element signature="e#755#756#0" expanded="true" />
-                <element signature="e#796#797#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/bootdo/src/main/resources/templates/image_check/imageCheck/imageCheck.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="182">
-              <caret line="43" column="90" selection-start-line="43" selection-start-column="79" selection-end-line="43" selection-end-column="90" />
-              <folding>
-                <element signature="n#style#0;n#div#3;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#input#0;n#div#3;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#input#1;n#div#3;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-              </folding>
+            <state relative-caret-position="378">
+              <caret line="50" column="4" selection-start-line="50" selection-start-column="4" selection-end-line="50" selection-end-column="4" />
             </state>
           </provider>
         </entry>
@@ -211,23 +132,35 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/bootdo/src/main/java/com/bootdo/image_check/controller/ImageCheckController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-16">
-              <caret line="40" column="51" lean-forward="true" selection-start-line="40" selection-start-column="51" selection-end-line="40" selection-end-column="51" />
+            <state relative-caret-position="135">
+              <caret line="57" column="26" selection-start-line="57" selection-start-column="18" selection-end-line="57" selection-end-column="26" />
               <folding>
                 <element signature="e#1287#1288#0" expanded="true" />
                 <element signature="e#1339#1340#0" expanded="true" />
-                <element signature="e#1845#1846#0" expanded="true" />
-                <element signature="e#1890#1891#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/bootdo/src/main/java/com/bootdo/image_check/domain/ImageCheckDO.java">
+        <entry file="file://$PROJECT_DIR$/bootdo/src/main/java/com/bootdo/image_check/dao/ImageCheckDao.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="7463">
-              <caret line="380" column="7" lean-forward="true" selection-start-line="380" selection-start-column="7" selection-end-line="380" selection-end-column="7" />
+            <state relative-caret-position="216">
+              <caret line="22" column="56" lean-forward="true" selection-start-line="22" selection-start-column="56" selection-end-line="22" selection-end-column="56" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/bootdo/src/main/resources/templates/image_check/imageCheck/imageCheck.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="324">
+              <caret line="51" column="80" lean-forward="true" selection-start-line="51" selection-start-column="80" selection-end-line="51" selection-end-column="80" />
+              <folding>
+                <element signature="n#style#0;n#div#3;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#input#0;n#div#3;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#input#1;n#div#3;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -265,11 +198,11 @@
         <option value="$PROJECT_DIR$/bootdo/src/main/java/com/bootdo/image_check/dao/ImageCheckDao.java" />
         <option value="$PROJECT_DIR$/bootdo/src/main/java/com/bootdo/image_check/service/impl/ImageCheckServiceImpl.java" />
         <option value="$PROJECT_DIR$/bootdo/src/main/java/com/bootdo/image_check/controller/ImageCheckController.java" />
-        <option value="$PROJECT_DIR$/bootdo/src/main/resources/templates/include.html" />
-        <option value="$PROJECT_DIR$/bootdo/src/main/resources/templates/image_check/imageCheck/imageCheck.html" />
-        <option value="$PROJECT_DIR$/bootdo/src/main/resources/static/js/appjs/image_check/imageCheck/imageCheck.js" />
         <option value="$PROJECT_DIR$/bootdo/src/main/resources/static/js/appjs/image_check/checkError/checkError.js" />
         <option value="$PROJECT_DIR$/bootdo/src/main/resources/templates/image_check/checkError/checkError.html" />
+        <option value="$PROJECT_DIR$/bootdo/src/main/resources/static/js/appjs/image_check/imageCheck/imageCheck.js" />
+        <option value="$PROJECT_DIR$/bootdo/src/main/resources/templates/image_check/imageCheck/imageCheck.html" />
+        <option value="$PROJECT_DIR$/bootdo/src/main/resources/templates/include.html" />
       </list>
     </option>
   </component>
@@ -394,55 +327,7 @@
               <item name="bootdo" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="bootdo" type="462c0819:PsiDirectoryNode" />
-              <item name="image_check" type="462c0819:PsiDirectoryNode" />
-              <item name="domain" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="TCM_ClinicalTTTPart" type="b2602c69:ProjectViewProjectNode" />
-              <item name="bootdo" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="bootdo" type="462c0819:PsiDirectoryNode" />
-              <item name="image_check" type="462c0819:PsiDirectoryNode" />
-              <item name="service" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="TCM_ClinicalTTTPart" type="b2602c69:ProjectViewProjectNode" />
-              <item name="bootdo" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="bootdo" type="462c0819:PsiDirectoryNode" />
-              <item name="image_check" type="462c0819:PsiDirectoryNode" />
-              <item name="service" type="462c0819:PsiDirectoryNode" />
-              <item name="impl" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="TCM_ClinicalTTTPart" type="b2602c69:ProjectViewProjectNode" />
-              <item name="bootdo" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="resources" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="TCM_ClinicalTTTPart" type="b2602c69:ProjectViewProjectNode" />
-              <item name="bootdo" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-              <item name="mybatis" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="TCM_ClinicalTTTPart" type="b2602c69:ProjectViewProjectNode" />
-              <item name="bootdo" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-              <item name="mybatis" type="462c0819:PsiDirectoryNode" />
-              <item name="image_check" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="TCM_ClinicalTTTPart" type="b2602c69:ProjectViewProjectNode" />
@@ -451,36 +336,6 @@
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="resources" type="462c0819:PsiDirectoryNode" />
               <item name="static" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="TCM_ClinicalTTTPart" type="b2602c69:ProjectViewProjectNode" />
-              <item name="bootdo" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-              <item name="static" type="462c0819:PsiDirectoryNode" />
-              <item name="css" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="TCM_ClinicalTTTPart" type="b2602c69:ProjectViewProjectNode" />
-              <item name="bootdo" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-              <item name="static" type="462c0819:PsiDirectoryNode" />
-              <item name="css" type="462c0819:PsiDirectoryNode" />
-              <item name="plugins" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="TCM_ClinicalTTTPart" type="b2602c69:ProjectViewProjectNode" />
-              <item name="bootdo" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-              <item name="static" type="462c0819:PsiDirectoryNode" />
-              <item name="css" type="462c0819:PsiDirectoryNode" />
-              <item name="plugins" type="462c0819:PsiDirectoryNode" />
-              <item name="datapicker" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="TCM_ClinicalTTTPart" type="b2602c69:ProjectViewProjectNode" />
@@ -511,18 +366,6 @@
               <item name="js" type="462c0819:PsiDirectoryNode" />
               <item name="appjs" type="462c0819:PsiDirectoryNode" />
               <item name="image_check" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="TCM_ClinicalTTTPart" type="b2602c69:ProjectViewProjectNode" />
-              <item name="bootdo" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-              <item name="static" type="462c0819:PsiDirectoryNode" />
-              <item name="js" type="462c0819:PsiDirectoryNode" />
-              <item name="appjs" type="462c0819:PsiDirectoryNode" />
-              <item name="image_check" type="462c0819:PsiDirectoryNode" />
-              <item name="checkError" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="TCM_ClinicalTTTPart" type="b2602c69:ProjectViewProjectNode" />
@@ -561,26 +404,7 @@
               <item name="resources" type="462c0819:PsiDirectoryNode" />
               <item name="templates" type="462c0819:PsiDirectoryNode" />
               <item name="image_check" type="462c0819:PsiDirectoryNode" />
-              <item name="checkError" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="TCM_ClinicalTTTPart" type="b2602c69:ProjectViewProjectNode" />
-              <item name="bootdo" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-              <item name="templates" type="462c0819:PsiDirectoryNode" />
-              <item name="image_check" type="462c0819:PsiDirectoryNode" />
               <item name="imageCheck" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="TCM_ClinicalTTTPart" type="b2602c69:ProjectViewProjectNode" />
-              <item name="bootdo" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-              <item name="templates" type="462c0819:PsiDirectoryNode" />
-              <item name="staff" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -597,7 +421,7 @@
     <property name="SONARLINT_PRECOMMIT_ANALYSIS" value="false" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1554357954355" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1554358463345" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/bootdo/pom.xml" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
@@ -674,7 +498,7 @@
       <workItem from="1554338828715" duration="785000" />
       <workItem from="1554340660263" duration="2749000" />
       <workItem from="1554345080513" duration="6267000" />
-      <workItem from="1554354665595" duration="3085000" />
+      <workItem from="1554354665595" duration="3792000" />
     </task>
     <task id="LOCAL-00001" summary="数据库莫名更新，解决bug">
       <created>1554186412764</created>
@@ -704,11 +528,18 @@
       <option name="project" value="LOCAL" />
       <updated>1554282916374</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="日历控件datepicker()的时候 - 成功">
+      <created>1554358061539</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1554358061539</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="49610000" />
+    <option name="totallyTimeSpent" value="50317000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -723,7 +554,7 @@
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.27458397" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.23071104" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="UI Designer" order="3" />
@@ -733,7 +564,7 @@
       <window_info id="Image Layers" order="7" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.26495728" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.3794872" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -769,7 +600,8 @@
     <MESSAGE value="可以根据条件查询 - 只是在JS中与HTML中的标签相应的ID配置一下就OK" />
     <MESSAGE value="第三版页面 - 完成" />
     <MESSAGE value="检测结果的文字显示与文字查询 - 完成" />
-    <option name="LAST_COMMIT_MESSAGE" value="检测结果的文字显示与文字查询 - 完成" />
+    <MESSAGE value="日历控件datepicker()的时候 - 成功" />
+    <option name="LAST_COMMIT_MESSAGE" value="日历控件datepicker()的时候 - 成功" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/bootdo/src/main/resources/ehcache.xml">
@@ -904,13 +736,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/bootdo/src/main/java/com/bootdo/image_check/dao/ImageCheckDao.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="216">
-          <caret line="22" column="56" lean-forward="true" selection-start-line="22" selection-start-column="56" selection-end-line="22" selection-end-column="56" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/bootdo/src/main/resources/static/js/appjs/staff/staff/staff.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="391">
@@ -941,42 +766,8 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/bootdo/src/main/resources/templates/include.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="143">
-          <caret line="39" column="46" selection-start-line="39" selection-start-column="40" selection-end-line="39" selection-end-column="46" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/bootdo/src/main/java/com/bootdo/image_check/controller/ImageCheckController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-16">
-          <caret line="40" column="51" lean-forward="true" selection-start-line="40" selection-start-column="51" selection-end-line="40" selection-end-column="51" />
-          <folding>
-            <element signature="e#1287#1288#0" expanded="true" />
-            <element signature="e#1339#1340#0" expanded="true" />
-            <element signature="e#1845#1846#0" expanded="true" />
-            <element signature="e#1890#1891#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/bootdo/src/main/resources/static/css/plugins/datapicker/datepicker3.css">
       <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/bootdo/src/main/resources/static/js/appjs/image_check/imageCheck/imageCheck.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-243">
-          <caret line="12" column="21" lean-forward="true" selection-start-line="12" selection-start-column="21" selection-end-line="12" selection-end-column="21" />
-          <folding>
-            <element signature="n#!!block;n#add#0" />
-            <element signature="n#!!block;n#edit#0" />
-            <element signature="n#!!block;n#remove#0" />
-            <element signature="n#!!block;n#resetPwd#0" />
-            <element signature="n#!!block;n#batchRemove#0" />
-          </folding>
-        </state>
-      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/bootdo/src/main/resources/mybatis/image_check/ImageCheckMapper.xml">
       <provider selected="true" editor-type-id="text-editor">
@@ -1030,10 +821,35 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/bootdo/src/main/resources/templates/image_check/checkError/checkError.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="137">
+          <caret line="32" column="90" selection-start-line="32" selection-start-column="90" selection-end-line="32" selection-end-column="90" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bootdo/src/main/java/com/bootdo/image_check/dao/ImageCheckDao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="216">
+          <caret line="22" column="56" lean-forward="true" selection-start-line="22" selection-start-column="56" selection-end-line="22" selection-end-column="56" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bootdo/src/main/java/com/bootdo/image_check/controller/ImageCheckController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="57" column="26" selection-start-line="57" selection-start-column="18" selection-end-line="57" selection-end-column="26" />
+          <folding>
+            <element signature="e#1287#1288#0" expanded="true" />
+            <element signature="e#1339#1340#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/bootdo/src/main/resources/templates/image_check/imageCheck/imageCheck.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="182">
-          <caret line="43" column="90" selection-start-line="43" selection-start-column="79" selection-end-line="43" selection-end-column="90" />
+        <state relative-caret-position="324">
+          <caret line="51" column="80" lean-forward="true" selection-start-line="51" selection-start-column="80" selection-end-line="51" selection-end-column="80" />
           <folding>
             <element signature="n#style#0;n#div#3;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#input#0;n#div#3;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -1042,10 +858,26 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/bootdo/src/main/resources/templates/image_check/checkError/checkError.html">
+    <entry file="file://$PROJECT_DIR$/bootdo/src/main/resources/static/js/appjs/image_check/imageCheck/imageCheck.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="299">
-          <caret line="32" column="90" selection-start-line="32" selection-start-column="90" selection-end-line="32" selection-end-column="90" />
+        <state relative-caret-position="189">
+          <caret line="7" column="3" lean-forward="true" selection-start-line="7" selection-start-column="3" selection-end-line="7" selection-end-column="3" />
+          <folding>
+            <element signature="n#!!block;n#load#0" />
+            <element signature="n#!!block;n#load#1" />
+            <element signature="n#!!block;n#add#0" />
+            <element signature="n#!!block;n#edit#0" />
+            <element signature="n#!!block;n#remove#0" />
+            <element signature="n#!!block;n#resetPwd#0" />
+            <element signature="n#!!block;n#batchRemove#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bootdo/src/main/resources/templates/include.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="378">
+          <caret line="50" column="4" selection-start-line="50" selection-start-column="4" selection-end-line="50" selection-end-column="4" />
         </state>
       </provider>
     </entry>
