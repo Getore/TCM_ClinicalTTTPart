@@ -1,8 +1,12 @@
 // $.noConflict();	// 解决JS文件冲突问题，因为datepicker()方法冲突，可能导致某些JS不可用
 
 var prefix = "/image_check/imageCheck"
+
+// 入口:
 $(function() {
-    load();		// 在这个文件中，load()需要在第一个，不然无法显示查询结果
+    // load();		// 在这个文件中，load()需要在第一个，不然无法显示查询结果
+    load000();
+
 	$('#userCheckBegin').datepicker();
     $('#userCheckEnd').datepicker();
 });
@@ -147,7 +151,24 @@ function load() {
                             // },
                             {
                                 title : '检测员检测用时(单位：秒)',
-                                field : 'id'
+                                field : 'timeDiffer',
+								footerFormatter : function(rows){
+                                    var sum = 0;
+                                    var num = 0;
+                                    var result = 0;
+                                    for (var i=0; i<rows.length;i++){
+                                        var counts = parseInt(rows[i].timeDiffer)
+                                        sum += counts
+										num++;
+                                    }
+                                    result = sum / num;
+
+                                    if (sum == 0){
+                                        result += ""
+                                    }
+
+                                    return result;
+                                }
                             },
                             // 								{
                             // 	field : 'userResult',
@@ -223,9 +244,10 @@ function load() {
 
                             ]
 					});
+    $('#exampleTable').bootstrapTable('refresh');
 }
 
-/*function load000() {
+function load000() {
     $('#exampleTable')
         .bootstrapTable(
             {
@@ -365,7 +387,24 @@ function load() {
                     // },
                     {
                         title : '检测员检测用时(单位：秒)',
-                        field : 'id'
+                        field : 'timeDiffer',
+                        footerFormatter : function(rows){
+                            var sum = 0;
+                            var num = 0;
+                            var result = 0;
+                            for (var i=0; i<rows.length;i++){
+                                var counts = parseInt(rows[i].timeDiffer)
+                                sum += counts
+                                num++;
+                            }
+                            result = sum / num;
+
+                            if (sum == 0){
+                                result += ""
+                            }
+
+                            return result;
+                        }
                     },
                     // 								{
                     // 	field : 'userResult',
@@ -421,7 +460,7 @@ function load() {
                     // 	field : 'remark',
                     // 	title : ''
                     // },
-                    /!*{
+                    /*{
                         title : '操作',
                         field : 'id',
                         align : 'center',
@@ -437,15 +476,17 @@ function load() {
                                 + '\')"><i class="fa fa-key"></i></a> ';
                             return e + d ;
                         }
-                    }*!/
+                    }*/
 
                 ]
             });
-}*/
+    $('#exampleTable').bootstrapTable('refresh');
+}
 
 function reLoad() {
-	$('#exampleTable').bootstrapTable('refresh');
+	$('#exampleTable').bootstrapTable('refresh');	// 只是用来刷新，下一步就去入口了
 }
+
 function add() {
     // 这里是open()方法表示重新打开一个窗口，也就是一个弹窗
 	layer.open({

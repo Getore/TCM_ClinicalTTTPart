@@ -5,6 +5,7 @@ import com.bootdo.image_check.domain.ImageCheckDO;
 import java.util.List;
 import java.util.Map;
 
+import com.bootdo.image_check.domain.ImageCheckViewDO;
 import org.apache.ibatis.annotations.Mapper;
 
 /**
@@ -20,7 +21,7 @@ public interface ImageCheckDao {
 	
 	List<ImageCheckDO> list(Map<String,Object> map);
 
-	List<ImageCheckDO> STOBlist(Map<String,Object> map);
+	List<ImageCheckViewDO> STOBlist(Map<String,Object> map);
 
 	int count(Map<String,Object> map);
 	

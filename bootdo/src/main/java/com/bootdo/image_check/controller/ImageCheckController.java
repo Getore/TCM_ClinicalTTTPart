@@ -3,6 +3,7 @@ package com.bootdo.image_check.controller;
 import java.util.List;
 import java.util.Map;
 
+import com.bootdo.image_check.domain.ImageCheckViewDO;
 import org.apache.shiro.authz.annotation.RequiresPermissions;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.ui.Model;
@@ -60,7 +61,7 @@ public class ImageCheckController {
 	public PageUtils STOBlist(@RequestParam Map<String, Object> params){
 		// 点击按钮从小到大排序，查询列表数据
 		Query query = new Query(params);
-		List<ImageCheckDO> imageCheckList = imageCheckService.STOBlist(query);
+		List<ImageCheckViewDO> imageCheckList = imageCheckService.STOBlist(query);
 		int total = imageCheckService.count(query);
 		PageUtils pageUtils = new PageUtils(imageCheckList, total);
 		return pageUtils;

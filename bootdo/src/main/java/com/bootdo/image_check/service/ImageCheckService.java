@@ -1,6 +1,7 @@
 package com.bootdo.image_check.service;
 
 import com.bootdo.image_check.domain.ImageCheckDO;
+import com.bootdo.image_check.domain.ImageCheckViewDO;
 
 import java.util.List;
 import java.util.Map;
@@ -18,7 +19,7 @@ public interface ImageCheckService {
 	
 	List<ImageCheckDO> list(Map<String, Object> map);
 
-	List<ImageCheckDO> STOBlist(Map<String, Object> map);
+	List<ImageCheckViewDO> STOBlist(Map<String, Object> map);
 
 	int count(Map<String, Object> map);
 	

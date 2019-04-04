@@ -1,5 +1,6 @@
 package com.bootdo.image_check.service.impl;
 
+import com.bootdo.image_check.domain.ImageCheckViewDO;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -28,7 +29,7 @@ public class ImageCheckServiceImpl implements ImageCheckService {
 	}
 
 	@Override
-	public List<ImageCheckDO> STOBlist(Map<String, Object> map) {
+	public List<ImageCheckViewDO> STOBlist(Map<String, Object> map) {
 		return imageCheckDao.STOBlist(map);
 	}
 
