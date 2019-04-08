@@ -91,11 +91,7 @@
 		<choose>
 			<when test="sort != null and sort.trim() != ''">
 				order by ${sort} ${order}
-				-- 				TODO 加个条件
 			</when>
-			<!--<otherwise>
-				order by timeDiffer asc
-			</otherwise>-->
 		</choose>
 		<if test="offset != null and limit != null">
 			limit #{offset}, #{limit}
@@ -138,11 +134,7 @@
         <choose>
             <when test="sort != null and sort.trim() != ''">
                 order by ${sort} ${order}
-                -- 				TODO 加个条件
             </when>
-           <!-- <otherwise>
-                order by timeDiffer desc
-            </otherwise>-->
         </choose>
         <if test="offset != null and limit != null">
             limit #{offset}, #{limit}
