@@ -7,8 +7,9 @@
 		select `id`,`accept_no`,`custom_id`,`upload_ip`,`upload_time`,`image_path`,`image_name`,`image_size`,`image_special`,`special_msg`,`check_type_id`,`machine_id`,`machine_check_time`,`machine_result`,`machine_check_value`,`machine_result_msg`,`user_check_id`,`user_check_begin`,`user_check_end`,`user_result`,`user_result_msg`,`final_result`,`deal_stage`,`create_time`,`create_user`,`update_time`,`update_user`,`remark` from pc_image_check where id = #{value}
 	</select>
 
-	<select id="list" resultType="com.bootdo.image_check.domain.ImageCheckDO">
-		select `id`,`accept_no`,`custom_id`,`upload_ip`,`upload_time`,`image_path`,`image_name`,`image_size`,`image_special`,`special_msg`,`check_type_id`,`machine_id`,`machine_check_time`,`machine_result`,`machine_check_value`,`machine_result_msg`,`user_check_id`,`user_check_begin`,`user_check_end`,`user_result`,`user_result_msg`,`final_result`,`deal_stage`,`create_time`,`create_user`,`update_time`,`update_user`,`remark` from pc_image_check
+	<select id="list" resultType="com.bootdo.image_check.domain.ImageCheckViewDO">
+		select TIMESTAMPDIFF(second,user_check_begin,user_check_end) as timeDiffer,
+		`id`,`accept_no`,`custom_id`,`upload_ip`,`upload_time`,`image_path`,`image_name`,`image_size`,`image_special`,`special_msg`,`check_type_id`,`machine_id`,`machine_check_time`,`machine_result`,`machine_check_value`,`machine_result_msg`,`user_check_id`,`user_check_begin`,`user_check_end`,`user_result`,`user_result_msg`,`final_result`,`deal_stage`,`create_time`,`create_user`,`update_time`,`update_user`,`remark` from pc_image_check
         <where>  
 		  		  <if test="id != null and id != ''"> and id = #{id} </if>
 		  		  <if test="acceptNo != null and acceptNo != ''"> and accept_no = #{acceptNo} </if>
@@ -92,9 +93,9 @@
 				order by ${sort} ${order}
 				-- 				TODO 加个条件
 			</when>
-			<otherwise>
+			<!--<otherwise>
 				order by timeDiffer asc
-			</otherwise>
+			</otherwise>-->
 		</choose>
 		<if test="offset != null and limit != null">
 			limit #{offset}, #{limit}
@@ -139,9 +140,9 @@
                 order by ${sort} ${order}
                 -- 				TODO 加个条件
             </when>
-            <otherwise>
+           <!-- <otherwise>
                 order by timeDiffer desc
-            </otherwise>
+            </otherwise>-->
         </choose>
         <if test="offset != null and limit != null">
             limit #{offset}, #{limit}

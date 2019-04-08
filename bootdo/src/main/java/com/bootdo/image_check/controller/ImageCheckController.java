@@ -59,6 +59,8 @@ public class ImageCheckController {
 	@GetMapping("/STOBlist")
 	@RequiresPermissions("image_check:imageCheck:imageCheck")
 	public PageUtils STOBlist(@RequestParam Map<String, Object> params){
+		params.put("sort","timeDiffer");
+		params.put("order","asc");
 		// 点击按钮从小到大排序，查询列表数据
 		Query query = new Query(params);
 		List<ImageCheckViewDO> imageCheckList = imageCheckService.STOBlist(query);
@@ -72,6 +74,8 @@ public class ImageCheckController {
     @GetMapping("/BTOSlist")
     @RequiresPermissions("image_check:imageCheck:imageCheck")
     public PageUtils BTOSlist(@RequestParam Map<String, Object> params){
+		params.put("sort","timeDiffer");
+		params.put("order","desc");
         // 点击按钮从大到小排序，查询列表数据
         Query query = new Query(params);
         List<ImageCheckViewDO> imageCheckList = imageCheckService.BTOSlist(query);

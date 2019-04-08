@@ -2,10 +2,19 @@
 
 var prefix = "/image_check/imageCheck"
 
+var resultUrl = "/list"    // 默认直接显示数据库的结果
+
+/*if ( document.getElementById("jiangxu") ){
+    resultUrl = "/BTOSlist";
+} else if ( document.getElementById("shengxu") ) {
+    resultUrl = "/STOBlist";
+} else {
+    resultUrl = "/list";
+}*/
+
 // 入口:
 $(function() {
-    // load();		// 在这个文件中，load()需要在第一个，不然无法显示查询结果
-    // load000();
+    load();		// 在这个文件中，load()需要在第一个，不然无法显示查询结果
 
 	$('#userCheckBegin').datepicker();
     $('#userCheckEnd').datepicker();
@@ -13,6 +22,35 @@ $(function() {
 
 // 查询
 function load() {
+    /*if ( $("#jiangxu") ) {      // 这样写条件为true
+        resultUrl = "/BTOSlist";
+        alert(123);
+        // load();
+    };
+    if ( $("#shengxu") ) {
+        resultUrl = "/STOBlist";
+        alert(1);
+        // load();
+    };
+    if ( $("#chaxun") ) {
+        resultUrl = "/list";
+        alert(3);
+        // load();
+    };*/
+    if ( $("#jiangxu") ) {      // 这样写条件为true
+        resultUrl = "/BTOSlist";
+        alert(123);
+        // load();
+    }else if ( $("#shengxu") ) {
+        resultUrl = "/STOBlist";
+        alert(1);
+        // load();
+    } else {
+        resultUrl = "/list";
+        alert(3);
+        // load();
+    };
+
     $('#exampleTable')
         .bootstrapTable(
             {
@@ -48,7 +86,9 @@ function load() {
                         machineId : $('#machineId').val(),
                         userCheckBegin : $('#userCheckBegin').val(),
                         userCheckEnd : $('#userCheckEnd').val(),
-                        finalResult : $('#finalResult').val()
+                        finalResult : $('#finalResult').val(),
+                        sort:$('#sort').val(),
+                        order:$('#order').val()
 
                         // name:$('#searchName').val(),
                         // username:$('#searchName').val()
@@ -247,7 +287,8 @@ function load() {
             });
     $('#exampleTable').bootstrapTable('refresh');
 }
-// 点击按钮从大到小排序
+
+/*// 点击按钮从大到小排序
 function BTOSlist() {
 	$('#exampleTable')
 			.bootstrapTable(
@@ -308,7 +349,7 @@ function BTOSlist() {
                                 // √
                                 field : 'acceptNo',
                                 title : '相片受理编号',
-								footerFormatter: '平均用时(单位：秒):'
+								footerFormatter: '本页平均用时(单位：秒):'
                             },
                             // 								{
                             // 	field : 'customId',
@@ -461,7 +502,7 @@ function BTOSlist() {
                             // 	field : 'remark',
                             // 	title : ''
                             // },
-                            /*{
+                            /!*{
                                 title : '操作',
                                 field : 'id',
                                 align : 'center',
@@ -477,7 +518,7 @@ function BTOSlist() {
                                         + '\')"><i class="fa fa-key"></i></a> ';
                                     return e + d ;
                                 }
-                            }*/
+                            }*!/
 
                             ]
 					});
@@ -697,7 +738,7 @@ function STOBlist() {
                     // 	field : 'remark',
                     // 	title : ''
                     // },
-                    /*{
+                    /!*{
                         title : '操作',
                         field : 'id',
                         align : 'center',
@@ -713,15 +754,25 @@ function STOBlist() {
                                 + '\')"><i class="fa fa-key"></i></a> ';
                             return e + d ;
                         }
-                    }*/
+                    }*!/
 
                 ]
             });
     $('#exampleTable').bootstrapTable('refresh');
-}
+}*/
 
 function reLoad() {
 	$('#exampleTable').bootstrapTable('refresh');	// 只是用来刷新，下一步就去入口了
+}
+function BTOSlist() {
+   $('#sort').val("timeDiffer");
+   $('#order').val("asc");
+   reLoad();
+}
+function STOBlist() {
+    $('#sort').val("timeDiffer");
+    $('#order').val("desc");
+    reLoad();
 }
 function add() {
     // 这里是open()方法表示重新打开一个窗口，也就是一个弹窗
