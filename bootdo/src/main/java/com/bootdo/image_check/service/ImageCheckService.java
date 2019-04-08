@@ -19,10 +19,6 @@ public interface ImageCheckService {
 	
 	List<ImageCheckDO> list(Map<String, Object> map);
 
-	List<ImageCheckViewDO> STOBlist(Map<String, Object> map);
-
-	List<ImageCheckViewDO> BTOSlist(Map<String, Object> map);
-
 	int count(Map<String, Object> map);
 	
 	int save(ImageCheckDO imageCheck);

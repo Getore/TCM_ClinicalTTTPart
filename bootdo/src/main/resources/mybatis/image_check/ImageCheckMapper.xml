@@ -44,7 +44,6 @@
         <choose>
             <when test="sort != null and sort.trim() != ''">
                 order by ${sort} ${order}
--- 				TODO 加个条件
             </when>
 			<otherwise>
                 order by id desc
@@ -55,7 +54,7 @@
 		</if>
 	</select>
 
- 	<select id="count" resultType="int">
+	<select id="count" resultType="int">
 		select count(*) from pc_image_check
 		 <where>  
 		  		  <if test="id != null and id != ''"> and id = #{id} </if>

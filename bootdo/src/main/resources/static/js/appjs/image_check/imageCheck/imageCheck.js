@@ -47,6 +47,7 @@ function load() {
                         userCheckBegin : $('#userCheckBegin').val(),
                         userCheckEnd : $('#userCheckEnd').val(),
                         finalResult : $('#finalResult').val(),
+                        // 添加sort和order排序
                         sort:$('#sort').val(),
                         order:$('#order').val()
 
@@ -153,13 +154,14 @@ function load() {
                     {
                         title : '检测员检测用时(单位：秒)',
                         field : 'timeDiffer',
+                        // 这是用来计算页面角标的方法
                         footerFormatter : function(rows){
                             var sum = 0;
                             var num = 0;
                             var result = 0;
                             for (var i=0; i<rows.length;i++){
                                 var counts = parseInt(rows[i].timeDiffer)
-                                sum += counts
+                                sum += counts;
                                 num++;
                             }
                             result = sum / num;

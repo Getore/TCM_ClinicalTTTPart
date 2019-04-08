@@ -54,44 +54,6 @@ public class ImageCheckController {
 		return pageUtils;
 	}
 
-//	点击按钮从小到大排序
-	@ResponseBody
-	@GetMapping("/STOBlist")
-	@RequiresPermissions("image_check:imageCheck:imageCheck")
-	public PageUtils STOBlist(@RequestParam Map<String, Object> params){
-		/*// 根据 MyBatis 中的语句查询
-		<when test="sort != null and sort.trim() != ''">
-				order by ${sort} ${order}
-		</when>*/
-		params.put("sort","timeDiffer");
-		params.put("order","asc");
-		// 点击按钮从小到大排序，查询列表数据
-		Query query = new Query(params);
-		List<ImageCheckViewDO> imageCheckList = imageCheckService.STOBlist(query);
-		int total = imageCheckService.count(query);
-		PageUtils pageUtils = new PageUtils(imageCheckList, total);
-		return pageUtils;
-	}
-
-    //	点击按钮从大到小排序
-    @ResponseBody
-    @GetMapping("/BTOSlist")
-    @RequiresPermissions("image_check:imageCheck:imageCheck")
-    public PageUtils BTOSlist(@RequestParam Map<String, Object> params){
-		/*// 根据 MyBatis 中的语句查询
-		<when test="sort != null and sort.trim() != ''">
-				order by ${sort} ${order}
-		</when>*/
-		params.put("sort","timeDiffer");
-		params.put("order","desc");
-        // 点击按钮从大到小排序，查询列表数据
-        Query query = new Query(params);
-        List<ImageCheckViewDO> imageCheckList = imageCheckService.BTOSlist(query);
-        int total = imageCheckService.count(query);
-        PageUtils pageUtils = new PageUtils(imageCheckList, total);
-        return pageUtils;
-    }
-	
 	@GetMapping("/add")
 	@RequiresPermissions("image_check:imageCheck:add")
 	String add(){

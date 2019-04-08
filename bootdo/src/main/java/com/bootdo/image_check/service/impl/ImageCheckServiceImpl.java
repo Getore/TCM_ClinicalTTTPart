@@ -29,16 +29,6 @@ public class ImageCheckServiceImpl implements ImageCheckService {
 	}
 
 	@Override
-	public List<ImageCheckViewDO> STOBlist(Map<String, Object> map) {
-		return imageCheckDao.STOBlist(map);
-	}
-
-	@Override
-	public List<ImageCheckViewDO> BTOSlist(Map<String, Object> map) {
-		return imageCheckDao.BTOSlist(map);
-	}
-
-	@Override
 	public int count(Map<String, Object> map){
 		return imageCheckDao.count(map);
 	}
