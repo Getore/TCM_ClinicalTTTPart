@@ -247,18 +247,19 @@ function load() {
             });
     $('#exampleTable').bootstrapTable('refresh');
 }
-function reLoad() {
-	$('#exampleTable').bootstrapTable('refresh');	// 只是用来刷新，下一步就去入口了
-}
 function BTOSlist() {
-   $('#sort').val("timeDiffer");
-   $('#order').val("desc");
-   reLoad();
+    $('#sort').val("timeDiffer");
+    $('#order').val("desc");
+    reLoad();
 }
 function STOBlist() {
     $('#sort').val("timeDiffer");
     $('#order').val("asc");
     reLoad();
+}
+
+function reLoad() {
+	$('#exampleTable').bootstrapTable('refresh');	// 只是用来刷新，下一步就去入口了
 }
 
 function add() {

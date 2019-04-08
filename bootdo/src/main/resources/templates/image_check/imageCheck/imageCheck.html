@@ -42,8 +42,11 @@
 										<label for="userCheckBegin" class="control-label">检测时间:</label>
 										<input type="text" class="form-control date-picker" id="userCheckBegin" name="userCheckBegin" style="max-width: 15%;display: inline-block"/>-
 										<input type="text" class="form-control date-picker" id="userCheckEnd" name="userCheckEnd" style="max-width: 15%;display: inline-block"/>
+
+										<!--根据 sort 和 order 条件，进行排序，所以这两条语句可以随意放置-->
 										<input id="sort" name="sort" value="id" type="hidden">
 										<input id="order" name="order" value="desc" type="hidden">
+										<!--根据 sort 和 order 条件，进行排序，所以这两条语句可以随意放置-->
 									</div>
 								</div>
 								<div style="display: flex">
@@ -51,18 +54,16 @@
 										<button class="btn btn-success" onclick="reLoad()" id="chaxun" style="float: right">查询</button>
 									</div>
 									<div class="columns pull-right" style="margin-left: 10px;margin-right: 10px">
+										<!--这里 onclick 方法记得跟改为 STOBlist() 方法-->
 										<button class="btn btn-success" onclick="STOBlist()" id="shengxu">用时升序排序</button>
 									</div>
 									<div class="columns pull-right" style="flex-grow: 2">
+										<!--这里 onclick 方法记得跟改为 BTOSlist() 方法-->
 										<button class="btn btn-success" onclick="BTOSlist()" id="jiangxu">用时降序排序</button>
 									</div>
 								</div>
 							</div>
 						</div>
-						<!--<div class="columns pull-right col-md-2 nopadding">
-							<input id="searchName" type="text" class="form-control"
-								placeholder="">
-						</div>-->
 					</div>
 					<table id="exampleTable" data-mobile-responsive="true">
 					</table>
@@ -96,6 +97,5 @@
 	</div>
 	<div th:include="include :: footer"></div>
 	<script type="text/javascript" src="/js/appjs/image_check/imageCheck/imageCheck.js"></script>
-	<!--<script type="text/javascript" src="/js/appjs/image_check/imageCheck/tableExport.js"></script>-->
 </body>
 </html>

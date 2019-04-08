@@ -23,7 +23,7 @@ import com.bootdo.common.utils.Query;
 import com.bootdo.common.utils.R;
 
 /**
- * 
+ * 图片检测结果查询
  * 
  * @author shenli
  * @email 1992lcg@163.com
@@ -59,6 +59,10 @@ public class ImageCheckController {
 	@GetMapping("/STOBlist")
 	@RequiresPermissions("image_check:imageCheck:imageCheck")
 	public PageUtils STOBlist(@RequestParam Map<String, Object> params){
+		/*// 根据 MyBatis 中的语句查询
+		<when test="sort != null and sort.trim() != ''">
+				order by ${sort} ${order}
+		</when>*/
 		params.put("sort","timeDiffer");
 		params.put("order","asc");
 		// 点击按钮从小到大排序，查询列表数据
@@ -74,6 +78,10 @@ public class ImageCheckController {
     @GetMapping("/BTOSlist")
     @RequiresPermissions("image_check:imageCheck:imageCheck")
     public PageUtils BTOSlist(@RequestParam Map<String, Object> params){
+		/*// 根据 MyBatis 中的语句查询
+		<when test="sort != null and sort.trim() != ''">
+				order by ${sort} ${order}
+		</when>*/
 		params.put("sort","timeDiffer");
 		params.put("order","desc");
         // 点击按钮从大到小排序，查询列表数据
