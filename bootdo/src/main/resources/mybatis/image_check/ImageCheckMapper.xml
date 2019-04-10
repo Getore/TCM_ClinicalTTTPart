@@ -7,154 +7,160 @@
 		select `id`,`accept_no`,`custom_id`,`upload_ip`,`upload_time`,`image_path`,`image_name`,`image_size`,`image_special`,`special_msg`,`check_type_id`,`machine_id`,`machine_check_time`,`machine_result`,`machine_check_value`,`machine_result_msg`,`user_check_id`,`user_check_begin`,`user_check_end`,`user_result`,`user_result_msg`,`final_result`,`deal_stage`,`create_time`,`create_user`,`update_time`,`update_user`,`remark` from pc_image_check where id = #{value}
 	</select>
 
-    <!-- 这里需要更改对象为 ImageCheckViewDO -->
+	<!-- 这里需要更改对象为 ImageCheckViewDO -->
 	<select id="list" resultType="com.bootdo.image_check.domain.ImageCheckViewDO">
 		select TIMESTAMPDIFF(second,user_check_begin,user_check_end) as timeDiffer,
-		`id`,`accept_no`,`custom_id`,`upload_ip`,`upload_time`,`image_path`,`image_name`,`image_size`,`image_special`,`special_msg`,`check_type_id`,`machine_id`,`machine_check_time`,`machine_result`,`machine_check_value`,`machine_result_msg`,`user_check_id`,`user_check_begin`,`user_check_end`,`user_result`,`user_result_msg`,`final_result`,`deal_stage`,`create_time`,`create_user`,`update_time`,`update_user`,`remark` from pc_image_check
-        <where>  
-		  		  <if test="id != null and id != ''"> and id = #{id} </if>
-		  		  <if test="acceptNo != null and acceptNo != ''"> and accept_no = #{acceptNo} </if>
-		  		  <if test="customId != null and customId != ''"> and custom_id = #{customId} </if>
-		  		  <if test="uploadIp != null and uploadIp != ''"> and upload_ip = #{uploadIp} </if>
-		  		  <if test="uploadTime != null and uploadTime != ''"> and upload_time = #{uploadTime} </if>
-		  		  <if test="imagePath != null and imagePath != ''"> and image_path = #{imagePath} </if>
-		  		  <if test="imageName != null and imageName != ''"> and image_name = #{imageName} </if>
-		  		  <if test="imageSize != null and imageSize != ''"> and image_size = #{imageSize} </if>
-		  		  <if test="imageSpecial != null and imageSpecial != ''"> and image_special = #{imageSpecial} </if>
-		  		  <if test="specialMsg != null and specialMsg != ''"> and special_msg = #{specialMsg} </if>
-		  		  <if test="checkTypeId != null and checkTypeId != ''"> and check_type_id = #{checkTypeId} </if>
-		  		  <if test="machineId != null and machineId != ''"> and machine_id = #{machineId} </if>
-		  		  <if test="machineCheckTime != null and machineCheckTime != ''"> and machine_check_time = #{machineCheckTime} </if>
-		  		  <if test="machineResult != null and machineResult != ''"> and machine_result = #{machineResult} </if>
-		  		  <if test="machineCheckValue != null and machineCheckValue != ''"> and machine_check_value = #{machineCheckValue} </if>
-		  		  <if test="machineResultMsg != null and machineResultMsg != ''"> and machine_result_msg = #{machineResultMsg} </if>
-		  		  <if test="userCheckId != null and userCheckId != ''"> and user_check_id = #{userCheckId} </if>
-		  		  <if test="userCheckBegin != null and userCheckBegin != ''"> and user_check_begin = #{userCheckBegin} </if>
-		  		  <if test="userCheckEnd != null and userCheckEnd != ''"> and user_check_end = #{userCheckEnd} </if>
-		  		  <if test="userResult != null and userResult != ''"> and user_result = #{userResult} </if>
-		  		  <if test="userResultMsg != null and userResultMsg != ''"> and user_result_msg = #{userResultMsg} </if>
-		  		  <if test="finalResult != null and finalResult != ''"> and final_result = #{finalResult} </if>
-		  		  <if test="dealStage != null and dealStage != ''"> and deal_stage = #{dealStage} </if>
-		  		  <if test="createTime != null and createTime != ''"> and create_time = #{createTime} </if>
-		  		  <if test="createUser != null and createUser != ''"> and create_user = #{createUser} </if>
-		  		  <if test="updateTime != null and updateTime != ''"> and update_time = #{updateTime} </if>
-		  		  <if test="updateUser != null and updateUser != ''"> and update_user = #{updateUser} </if>
-		  		  <if test="remark != null and remark != ''"> and remark = #{remark} </if>
-		  		</where>
-        <choose>
-            <when test="sort != null and sort.trim() != ''">
-                order by ${sort} ${order}
-            </when>
+		`id`,`accept_no`,`custom_id`,`upload_ip`,`upload_time`,`image_path`,`image_name`,`image_size`,`image_special`,`special_msg`,`check_type_id`,`machine_id`,`machine_check_time`,`machine_result`,`machine_check_value`,`machine_result_msg`,`user_check_id`,`user_check_begin`,`user_check_end`,`user_result`,`user_result_msg`,`final_result`,`deal_stage`,`create_time`,`create_user`,`update_time`,`update_user`,`remark` from pc_image_check p
+		<where>
+			<if test="id != null and id != ''"> and id = #{id} </if>
+			<if test="acceptNo != null and acceptNo != ''"> and accept_no = #{acceptNo} </if>
+			<if test="customId != null and customId != ''"> and custom_id = #{customId} </if>
+			<if test="uploadIp != null and uploadIp != ''"> and upload_ip = #{uploadIp} </if>
+			<if test="uploadTime != null and uploadTime != ''"> and upload_time = #{uploadTime} </if>
+			<if test="imagePath != null and imagePath != ''"> and image_path = #{imagePath} </if>
+			<if test="imageName != null and imageName != ''"> and image_name = #{imageName} </if>
+			<if test="imageSize != null and imageSize != ''"> and image_size = #{imageSize} </if>
+			<if test="imageSpecial != null and imageSpecial != ''"> and image_special = #{imageSpecial} </if>
+			<if test="specialMsg != null and specialMsg != ''"> and special_msg = #{specialMsg} </if>
+			<if test="checkTypeId != null and checkTypeId != ''"> and check_type_id = #{checkTypeId} </if>
+			<if test="machineId != null and machineId != ''"> and machine_id = #{machineId} </if>
+			<if test="machineCheckTime != null and machineCheckTime != ''"> and machine_check_time = #{machineCheckTime} </if>
+			<if test="machineResult != null and machineResult != ''"> and machine_result = #{machineResult} </if>
+			<if test="machineCheckValue != null and machineCheckValue != ''"> and machine_check_value = #{machineCheckValue} </if>
+			<if test="machineResultMsg != null and machineResultMsg != ''"> and machine_result_msg = #{machineResultMsg} </if>
+			<if test="userCheckId != null and userCheckId != ''"> and user_check_id = #{userCheckId} </if>
+
+			<if test="userCheckBegin != null and userCheckBegin != ''">  and date_format(p.user_check_begin, '%Y-%m-%d') <![CDATA[ >= ]]>  date_format(#{userCheckBegin}, '%Y-%m-%d') </if>
+			<if test="userCheckEnd != null and userCheckEnd != ''">  and date_format(p.user_check_begin, '%Y-%m-%d') <![CDATA[ <= ]]> date_format(#{userCheckEnd}, '%Y-%m-%d') </if>
+			<if test="userCheckEnd != null and userCheckEnd != '' and userCheckBegin != null and userCheckBegin != ''">  and date_format(p.user_check_begin, '%Y-%m-%d') BETWEEN  date_format(#{userCheckBegin}, '%Y-%m-%d') AND date_format(#{userCheckEnd}, '%Y-%m-%d') </if>
+
+			<if test="userResult != null and userResult != ''"> and user_result = #{userResult} </if>
+			<if test="userResultMsg != null and userResultMsg != ''"> and user_result_msg = #{userResultMsg} </if>
+			<if test="finalResult != null and finalResult != ''"> and final_result = #{finalResult} </if>
+			<if test="dealStage != null and dealStage != ''"> and deal_stage = #{dealStage} </if>
+			<if test="createTime != null and createTime != ''"> and create_time = #{createTime} </if>
+			<if test="createUser != null and createUser != ''"> and create_user = #{createUser} </if>
+			<if test="updateTime != null and updateTime != ''"> and update_time = #{updateTime} </if>
+			<if test="updateUser != null and updateUser != ''"> and update_user = #{updateUser} </if>
+			<if test="remark != null and remark != ''"> and remark = #{remark} </if>
+		</where>
+		<choose>
+			<when test="sort != null and sort.trim() != ''">
+				order by ${sort} ${order}
+			</when>
 			<otherwise>
-                order by id desc
+				order by id desc
 			</otherwise>
-        </choose>
+		</choose>
 		<if test="offset != null and limit != null">
 			limit #{offset}, #{limit}
 		</if>
 	</select>
 
 	<select id="count" resultType="int">
-		select count(*) from pc_image_check
-		 <where>  
-		  		  <if test="id != null and id != ''"> and id = #{id} </if>
-		  		  <if test="acceptNo != null and acceptNo != ''"> and accept_no = #{acceptNo} </if>
-		  		  <if test="customId != null and customId != ''"> and custom_id = #{customId} </if>
-		  		  <if test="uploadIp != null and uploadIp != ''"> and upload_ip = #{uploadIp} </if>
-		  		  <if test="uploadTime != null and uploadTime != ''"> and upload_time = #{uploadTime} </if>
-		  		  <if test="imagePath != null and imagePath != ''"> and image_path = #{imagePath} </if>
-		  		  <if test="imageName != null and imageName != ''"> and image_name = #{imageName} </if>
-		  		  <if test="imageSize != null and imageSize != ''"> and image_size = #{imageSize} </if>
-		  		  <if test="imageSpecial != null and imageSpecial != ''"> and image_special = #{imageSpecial} </if>
-		  		  <if test="specialMsg != null and specialMsg != ''"> and special_msg = #{specialMsg} </if>
-		  		  <if test="checkTypeId != null and checkTypeId != ''"> and check_type_id = #{checkTypeId} </if>
-		  		  <if test="machineId != null and machineId != ''"> and machine_id = #{machineId} </if>
-		  		  <if test="machineCheckTime != null and machineCheckTime != ''"> and machine_check_time = #{machineCheckTime} </if>
-		  		  <if test="machineResult != null and machineResult != ''"> and machine_result = #{machineResult} </if>
-		  		  <if test="machineCheckValue != null and machineCheckValue != ''"> and machine_check_value = #{machineCheckValue} </if>
-		  		  <if test="machineResultMsg != null and machineResultMsg != ''"> and machine_result_msg = #{machineResultMsg} </if>
-		  		  <if test="userCheckId != null and userCheckId != ''"> and user_check_id = #{userCheckId} </if>
-		  		  <if test="userCheckBegin != null and userCheckBegin != ''"> and user_check_begin = #{userCheckBegin} </if>
-		  		  <if test="userCheckEnd != null and userCheckEnd != ''"> and user_check_end = #{userCheckEnd} </if>
-		  		  <if test="userResult != null and userResult != ''"> and user_result = #{userResult} </if>
-		  		  <if test="userResultMsg != null and userResultMsg != ''"> and user_result_msg = #{userResultMsg} </if>
-		  		  <if test="finalResult != null and finalResult != ''"> and final_result = #{finalResult} </if>
-		  		  <if test="dealStage != null and dealStage != ''"> and deal_stage = #{dealStage} </if>
-		  		  <if test="createTime != null and createTime != ''"> and create_time = #{createTime} </if>
-		  		  <if test="createUser != null and createUser != ''"> and create_user = #{createUser} </if>
-		  		  <if test="updateTime != null and updateTime != ''"> and update_time = #{updateTime} </if>
-		  		  <if test="updateUser != null and updateUser != ''"> and update_user = #{updateUser} </if>
-		  		  <if test="remark != null and remark != ''"> and remark = #{remark} </if>
-		  		</where>
+		select count(*) from pc_image_check p
+		<where>
+			<if test="id != null and id != ''"> and id = #{id} </if>
+			<if test="acceptNo != null and acceptNo != ''"> and accept_no = #{acceptNo} </if>
+			<if test="customId != null and customId != ''"> and custom_id = #{customId} </if>
+			<if test="uploadIp != null and uploadIp != ''"> and upload_ip = #{uploadIp} </if>
+			<if test="uploadTime != null and uploadTime != ''"> and upload_time = #{uploadTime} </if>
+			<if test="imagePath != null and imagePath != ''"> and image_path = #{imagePath} </if>
+			<if test="imageName != null and imageName != ''"> and image_name = #{imageName} </if>
+			<if test="imageSize != null and imageSize != ''"> and image_size = #{imageSize} </if>
+			<if test="imageSpecial != null and imageSpecial != ''"> and image_special = #{imageSpecial} </if>
+			<if test="specialMsg != null and specialMsg != ''"> and special_msg = #{specialMsg} </if>
+			<if test="checkTypeId != null and checkTypeId != ''"> and check_type_id = #{checkTypeId} </if>
+			<if test="machineId != null and machineId != ''"> and machine_id = #{machineId} </if>
+			<if test="machineCheckTime != null and machineCheckTime != ''"> and machine_check_time = #{machineCheckTime} </if>
+			<if test="machineResult != null and machineResult != ''"> and machine_result = #{machineResult} </if>
+			<if test="machineCheckValue != null and machineCheckValue != ''"> and machine_check_value = #{machineCheckValue} </if>
+			<if test="machineResultMsg != null and machineResultMsg != ''"> and machine_result_msg = #{machineResultMsg} </if>
+			<if test="userCheckId != null and userCheckId != ''"> and user_check_id = #{userCheckId} </if>
+
+			<if test="userCheckBegin != null and userCheckBegin != ''">  and date_format(p.user_check_begin, '%Y-%m-%d') <![CDATA[ >= ]]>  date_format(#{userCheckBegin}, '%Y-%m-%d') </if>
+			<if test="userCheckEnd != null and userCheckEnd != ''">  and date_format(p.user_check_begin, '%Y-%m-%d') <![CDATA[ <= ]]> date_format(#{userCheckEnd}, '%Y-%m-%d') </if>
+			<if test="userCheckEnd != null and userCheckEnd != '' and userCheckBegin != null and userCheckBegin != ''">  and date_format(p.user_check_begin, '%Y-%m-%d') BETWEEN  date_format(#{userCheckBegin}, '%Y-%m-%d') AND date_format(#{userCheckEnd}, '%Y-%m-%d') </if>
+
+			<if test="userResult != null and userResult != ''"> and user_result = #{userResult} </if>
+			<if test="userResultMsg != null and userResultMsg != ''"> and user_result_msg = #{userResultMsg} </if>
+			<if test="finalResult != null and finalResult != ''"> and final_result = #{finalResult} </if>
+			<if test="dealStage != null and dealStage != ''"> and deal_stage = #{dealStage} </if>
+			<if test="createTime != null and createTime != ''"> and create_time = #{createTime} </if>
+			<if test="createUser != null and createUser != ''"> and create_user = #{createUser} </if>
+			<if test="updateTime != null and updateTime != ''"> and update_time = #{updateTime} </if>
+			<if test="updateUser != null and updateUser != ''"> and update_user = #{updateUser} </if>
+			<if test="remark != null and remark != ''"> and remark = #{remark} </if>
+		</where>
 	</select>
-	 
+
 	<insert id="save" parameterType="com.bootdo.image_check.domain.ImageCheckDO">
 		insert into pc_image_check
 		(
-			`id`, 
-			`accept_no`, 
-			`custom_id`, 
-			`upload_ip`, 
-			`upload_time`, 
-			`image_path`, 
-			`image_name`, 
-			`image_size`, 
-			`image_special`, 
-			`special_msg`, 
-			`check_type_id`, 
-			`machine_id`, 
-			`machine_check_time`, 
-			`machine_result`, 
-			`machine_check_value`, 
-			`machine_result_msg`, 
-			`user_check_id`, 
-			`user_check_begin`, 
-			`user_check_end`, 
-			`user_result`, 
-			`user_result_msg`, 
-			`final_result`, 
-			`deal_stage`, 
-			`create_time`, 
-			`create_user`, 
-			`update_time`, 
-			`update_user`, 
+			`id`,
+			`accept_no`,
+			`custom_id`,
+			`upload_ip`,
+			`upload_time`,
+			`image_path`,
+			`image_name`,
+			`image_size`,
+			`image_special`,
+			`special_msg`,
+			`check_type_id`,
+			`machine_id`,
+			`machine_check_time`,
+			`machine_result`,
+			`machine_check_value`,
+			`machine_result_msg`,
+			`user_check_id`,
+			`user_check_begin`,
+			`user_check_end`,
+			`user_result`,
+			`user_result_msg`,
+			`final_result`,
+			`deal_stage`,
+			`create_time`,
+			`create_user`,
+			`update_time`,
+			`update_user`,
 			`remark`
 		)
 		values
 		(
-			#{id}, 
-			#{acceptNo}, 
-			#{customId}, 
-			#{uploadIp}, 
-			#{uploadTime}, 
-			#{imagePath}, 
-			#{imageName}, 
-			#{imageSize}, 
-			#{imageSpecial}, 
-			#{specialMsg}, 
-			#{checkTypeId}, 
-			#{machineId}, 
-			#{machineCheckTime}, 
-			#{machineResult}, 
-			#{machineCheckValue}, 
-			#{machineResultMsg}, 
-			#{userCheckId}, 
-			#{userCheckBegin}, 
-			#{userCheckEnd}, 
-			#{userResult}, 
-			#{userResultMsg}, 
-			#{finalResult}, 
-			#{dealStage}, 
-			#{createTime}, 
-			#{createUser}, 
-			#{updateTime}, 
-			#{updateUser}, 
+			#{id},
+			#{acceptNo},
+			#{customId},
+			#{uploadIp},
+			#{uploadTime},
+			#{imagePath},
+			#{imageName},
+			#{imageSize},
+			#{imageSpecial},
+			#{specialMsg},
+			#{checkTypeId},
+			#{machineId},
+			#{machineCheckTime},
+			#{machineResult},
+			#{machineCheckValue},
+			#{machineResultMsg},
+			#{userCheckId},
+			#{userCheckBegin},
+			#{userCheckEnd},
+			#{userResult},
+			#{userResultMsg},
+			#{finalResult},
+			#{dealStage},
+			#{createTime},
+			#{createUser},
+			#{updateTime},
+			#{updateUser},
 			#{remark}
 		)
 	</insert>
-	 
+
 	<update id="update" parameterType="com.bootdo.image_check.domain.ImageCheckDO">
-		update pc_image_check 
+		update pc_image_check
 		<set>
 			<if test="acceptNo != null">`accept_no` = #{acceptNo}, </if>
 			<if test="customId != null">`custom_id` = #{customId}, </if>
@@ -186,13 +192,13 @@
 		</set>
 		where id = #{id}
 	</update>
-	
+
 	<delete id="remove">
 		delete from pc_image_check where id = #{value}
 	</delete>
-	
+
 	<delete id="batchRemove">
-		delete from pc_image_check where id in 
+		delete from pc_image_check where id in
 		<foreach item="id" collection="array" open="(" separator="," close=")">
 			#{id}
 		</foreach>
