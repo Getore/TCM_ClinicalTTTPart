@@ -43,7 +43,7 @@ function load() {
 
                         // shenli - 这是准备条件项的东西
                         userCheckId : $('#userCheckId').val(),
-                        machineId : $('#machineId').val(),
+                        customId : $('#customId').val(),
                         userCheckBegin : $('#userCheckBegin').val(),
                         userCheckEnd : $('#userCheckEnd').val(),
                         finalResult : $('#finalResult').val(),
@@ -73,7 +73,7 @@ function load() {
                         // √
                         field : 'acceptNo',
                         title : '相片受理编号',
-                        footerFormatter: '平均用时(单位：秒):'
+                        footerFormatter: '本页面平均用时(单位：秒):'
                     },
                     // 								{
                     // 	field : 'customId',
@@ -86,7 +86,25 @@ function load() {
                     {
                         field : 'uploadTime',
                         // title : '上传照片的时间'
-                        title : '拍照时间'
+                        title : '拍照时间',
+                        // 这是用来计算页面角标的方法
+                        footerFormatter : function(rows){
+                            var sum = 0;
+                            var num = 0;
+                            var result = 0;
+                            for (var i=0; i<rows.length;i++){
+                                var counts = parseInt(rows[i].timeDiffer)
+                                sum += counts;
+                                num++;
+                            }
+                            result = sum / num;
+
+                            if (sum == 0){
+                                result += ""
+                            }
+
+                            return result;
+                        }
                     },
                     // 								{
                     // 	field : 'imagePath',
@@ -115,8 +133,9 @@ function load() {
                     // },
                     {
                         // √
-                        field : 'machineId',
-                        title : '设备号'
+                        field : 'customId',
+                        title : '设备号',
+                        footerFormatter: '所有平均用时(单位：秒):'
                     },
                     // 								{
                     // 	field : 'machineCheckTime',
@@ -138,7 +157,11 @@ function load() {
                         // √
                         field : 'userCheckId',
                         // title : '人检id'
-                        title : '检测员'
+                        title : '检测员'/*,
+                        // 这是用来计算页面角标的方法
+                        footerFormatter : function(){
+                            return AVG(timestampdiff(second, user_check_begin, user_check_end));
+                        }*/
                     },
                     // {
                     //     // √
@@ -153,25 +176,7 @@ function load() {
                     // },
                     {
                         title : '检测员检测用时(单位：秒)',
-                        field : 'timeDiffer',
-                        // 这是用来计算页面角标的方法
-                        footerFormatter : function(rows){
-                            var sum = 0;
-                            var num = 0;
-                            var result = 0;
-                            for (var i=0; i<rows.length;i++){
-                                var counts = parseInt(rows[i].timeDiffer)
-                                sum += counts;
-                                num++;
-                            }
-                            result = sum / num;
-
-                            if (sum == 0){
-                                result += ""
-                            }
-
-                            return result;
-                        }
+                        field : 'timeDiffer'
                     },
                     // 								{
                     // 	field : 'userResult',
@@ -249,6 +254,7 @@ function load() {
             });
     $('#exampleTable').bootstrapTable('refresh');
 }
+
 function BTOSlist() {
     $('#sort').val("timeDiffer");
     $('#order').val("desc");
