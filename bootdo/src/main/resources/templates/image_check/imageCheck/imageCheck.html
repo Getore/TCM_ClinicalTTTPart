@@ -51,24 +51,30 @@
 								</div>
 
 								<!--显示用时平均时间-->
-								<div>
-									<label for="sum" class="control-label">总的查询平均时间:</label>
-									<input type="text" class="form-control date-picker" id="sum" name="sum" style="max-width: 15%;display: inline-block"/>
+								<div style="margin-top: 10px;margin-left: 25px">
+									<div>
+										<label for="sum" class="control-label">总的用时平均时间:</label>
+										<input type="text" class="form-control date-picker" id="sum" name="sum" style="max-width: 18%;display: inline-block"/>
+									</div>
+									<div style="display: flex;margin-top: -45px">
+										<!--用来美观页面的-->
+										<div class="columns pull-right" style="flex-grow: 9"></div>
+										<!--用来美观页面的-->
+										<div class="columns pull-right" style="flex-grow: 2">
+											<button class="btn btn-success" onclick="reLoad()" id="chaxun" style="float: right">查询</button>
+										</div>
+										<div class="columns pull-right" style="margin-left: 10px;margin-right: 10px">
+											<!--这里 onclick 方法记得跟改为 STOBlist() 方法-->
+											<button class="btn btn-success" onclick="STOBlist()" id="shengxu">用时升序排序</button>
+										</div>
+										<div class="columns pull-right" style="flex-grow: 2">
+											<!--这里 onclick 方法记得跟改为 BTOSlist() 方法-->
+											<button class="btn btn-success" onclick="BTOSlist()" id="jiangxu">用时降序排序</button>
+										</div>
+									</div>
 								</div>
 
-								<div style="display: flex">
-									<div class="columns pull-right" style="flex-grow: 2">
-										<button class="btn btn-success" onclick="reLoad()" id="chaxun" style="float: right">查询</button>
-									</div>
-									<div class="columns pull-right" style="margin-left: 10px;margin-right: 10px">
-										<!--这里 onclick 方法记得跟改为 STOBlist() 方法-->
-										<button class="btn btn-success" onclick="STOBlist()" id="shengxu">用时升序排序</button>
-									</div>
-									<div class="columns pull-right" style="flex-grow: 2">
-										<!--这里 onclick 方法记得跟改为 BTOSlist() 方法-->
-										<button class="btn btn-success" onclick="BTOSlist()" id="jiangxu">用时降序排序</button>
-									</div>
-								</div>
+
 							</div>
 						</div>
 					</div>
