@@ -350,7 +350,7 @@ function batchRemove() {
 	});
 }
 
-查询
+// 查询
 function sum() {
     $.ajax({
         cache : true,

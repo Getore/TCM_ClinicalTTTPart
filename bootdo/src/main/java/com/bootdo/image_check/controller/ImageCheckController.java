@@ -118,6 +118,12 @@ public class ImageCheckController {
 		return R.ok();
 	}
 
+	/**
+	 * shenli
+	 *
+	 * @return
+	 * @throws Exception
+	 */
 	@ResponseBody
 	@RequestMapping(value = "/sum")
 	public Double sum() throws Exception{
