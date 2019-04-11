@@ -19,7 +19,7 @@ public interface ImageCheckDao {
 
 	ImageCheckDO get(Integer id);
 	
-	List<ImageCheckDO> list(Map<String,Object> map);
+	List<ImageCheckViewDO> list(Map<String,Object> map);
 
 	int count(Map<String,Object> map);
 	
@@ -30,4 +30,6 @@ public interface ImageCheckDao {
 	int remove(Integer id);
 	
 	int batchRemove(Integer[] ids);
+
+	Double sum();
 }

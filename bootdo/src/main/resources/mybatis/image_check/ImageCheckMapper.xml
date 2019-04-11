@@ -57,6 +57,11 @@
 		</if>
 	</select>
 
+	<!-- 查询平均时间 -->
+	<select id="sum" resultType="java.lang.Double">
+		select AVG(timestampdiff(second, user_check_begin, user_check_end)) from pc_image_check
+	</select>
+
 	<select id="count" resultType="int">
 		select count(*) from pc_image_check p
 		<where>

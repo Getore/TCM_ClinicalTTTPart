@@ -8,6 +8,8 @@ $(function() {
 
 	$('#userCheckBegin').datepicker();
     $('#userCheckEnd').datepicker();
+
+    sum();
 });
 
 function load() {
@@ -134,8 +136,8 @@ function load() {
                     {
                         // √
                         field : 'customId',
-                        title : '设备号',
-                        footerFormatter: '所有平均用时(单位：秒):'
+                        title : '设备号'
+                        // footerFormatter: '所有平均用时(单位：秒):'
                     },
                     // 								{
                     // 	field : 'machineCheckTime',
@@ -157,11 +159,9 @@ function load() {
                         // √
                         field : 'userCheckId',
                         // title : '人检id'
-                        title : '检测员'/*,
+                        title : '检测员',
                         // 这是用来计算页面角标的方法
-                        footerFormatter : function(){
-                            return AVG(timestampdiff(second, user_check_begin, user_check_end));
-                        }*/
+                        // footerFormatter : document.location.href = prefix + "/avg"
                     },
                     // {
                     //     // √
@@ -350,7 +350,31 @@ function batchRemove() {
 	});
 }
 
-/*
-function STOBlistData() {
-    document.location.href = prefix + "/STOBlist";
-}*/
+查询
+function sum() {
+    $.ajax({
+        cache : true,
+        type : "get",
+        url : "/image_check/imageCheck/sum",
+        // data : $('#signupForm').serialize(),// 你的formid
+        async : false,
+        /*error : function(request) {
+            parent.layer.alert("Connection error");
+        },*/
+        success : function(data) {
+            /*if (data.code == 0) {
+                parent.layer.msg("操作成功");
+                parent.reLoad();
+                var index = parent.layer.getFrameIndex(window.name); // 获取窗口索引
+                parent.layer.close(index);
+
+            } else {
+                parent.layer.alert(data.msg)
+            }*/
+
+            // 将 data 值赋给 id=sum 的 input即可
+            $('#sum').val(data);
+
+        }
+    });
+}

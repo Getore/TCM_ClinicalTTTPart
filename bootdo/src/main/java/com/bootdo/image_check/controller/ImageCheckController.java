@@ -1,5 +1,6 @@
 package com.bootdo.image_check.controller;
 
+import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
@@ -21,6 +22,8 @@ import com.bootdo.image_check.service.ImageCheckService;
 import com.bootdo.common.utils.PageUtils;
 import com.bootdo.common.utils.Query;
 import com.bootdo.common.utils.R;
+
+import javax.servlet.http.HttpServletResponse;
 
 /**
  * 图片检测结果查询
@@ -48,7 +51,7 @@ public class ImageCheckController {
 	public PageUtils list(@RequestParam Map<String, Object> params){
 		// 查询列表数据
         Query query = new Query(params);
-		List<ImageCheckDO> imageCheckList = imageCheckService.list(query);
+		List<ImageCheckViewDO> imageCheckList = imageCheckService.list(query);
 		int total = imageCheckService.count(query);
 		PageUtils pageUtils = new PageUtils(imageCheckList, total);
 		return pageUtils;
@@ -115,5 +118,14 @@ public class ImageCheckController {
 		return R.ok();
 	}
 
+	@ResponseBody
+	@RequestMapping(value = "/sum")
+	public Double sum() throws Exception{
+		Map<String, Object> map = new HashMap<>();
+		int total = imageCheckService.count(map);
+		Double sum = imageCheckService.sum();
+		double result = sum / total;
+		return result;
+	}
 
 }

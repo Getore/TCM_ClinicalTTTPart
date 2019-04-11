@@ -24,7 +24,7 @@ public class ImageCheckServiceImpl implements ImageCheckService {
 	}
 	
 	@Override
-	public List<ImageCheckDO> list(Map<String, Object> map){
+	public List<ImageCheckViewDO> list(Map<String, Object> map){
 		return imageCheckDao.list(map);
 	}
 
@@ -52,5 +52,10 @@ public class ImageCheckServiceImpl implements ImageCheckService {
 	public int batchRemove(Integer[] ids){
 		return imageCheckDao.batchRemove(ids);
 	}
-	
+
+	@Override
+	public Double sum() {
+		return imageCheckDao.sum();
+	}
+
 }
