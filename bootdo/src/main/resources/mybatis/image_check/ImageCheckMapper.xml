@@ -35,7 +35,7 @@
 			<if test="userCheckEnd != null and userCheckEnd != '' and userCheckBegin != null and userCheckBegin != ''">  and date_format(p.user_check_begin, '%Y-%m-%d') BETWEEN  date_format(#{userCheckBegin}, '%Y-%m-%d') AND date_format(#{userCheckEnd}, '%Y-%m-%d') </if>
 
 			<if test="userResult != null and userResult != ''"> and user_result = #{userResult} </if>
-			<if test="userResultMsg != null and userResultMsg != ''"> and user_result_msg = #{userResultMsg} </if>
+			<if test="userResultMsg != null and userResultMsg != ''"> and user_result_msg like CONCAT('%', #{userResultMsg}, '%') </if>
 			<if test="finalResult != null and finalResult != ''"> and final_result = #{finalResult} </if>
 			<if test="dealStage != null and dealStage != ''"> and deal_stage = #{dealStage} </if>
 			<if test="createTime != null and createTime != ''"> and create_time = #{createTime} </if>
@@ -61,6 +61,17 @@
 	<select id="sum" resultType="java.lang.Double">
 		select AVG(timestampdiff(second, user_check_begin, user_check_end)) from pc_image_check
 	</select>
+
+	<!--错误原因-->
+<!--	<select id="errorMsg" resultType="">
+		select id,user_result_msg
+		from pc_image_check
+		<where>
+			<if test="userResultMsg != null and userResultMsg != ''"> and user_result_msg = #{userResultMsg} </if>
+		</where>
+
+		like '%08%'
+	</select>-->
 
 	<select id="count" resultType="int">
 		select count(*) from pc_image_check p

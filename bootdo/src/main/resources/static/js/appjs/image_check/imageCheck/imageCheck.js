@@ -9,6 +9,7 @@ $(function() {
 	$('#userCheckBegin').datepicker();
     $('#userCheckEnd').datepicker();
 
+    // 总的用时平均时间
     sum();
 });
 
@@ -49,6 +50,7 @@ function load() {
                         userCheckBegin : $('#userCheckBegin').val(),
                         userCheckEnd : $('#userCheckEnd').val(),
                         finalResult : $('#finalResult').val(),
+                        userResultMsg : $('#userResultMsg').val(),
                         // 添加sort和order排序
                         sort:$('#sort').val(),
                         order:$('#order').val()
