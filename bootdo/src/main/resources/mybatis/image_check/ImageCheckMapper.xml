@@ -60,7 +60,7 @@
 	<!-- 查询平均时间 -->
 	<select id="sum" resultType="java.lang.Double">
 		select AVG(timestampdiff(second, user_check_begin, user_check_end))
-		from pc_image_check
+		from pc_image_check p
 		<where>
 			<if test="id != null and id != ''"> and id = #{id} </if>
 			<if test="acceptNo != null and acceptNo != ''"> and accept_no = #{acceptNo} </if>
@@ -142,55 +142,6 @@
 			<if test="updateUser != null and updateUser != ''"> and update_user = #{updateUser} </if>
 			<if test="remark != null and remark != ''"> and remark = #{remark} </if>
 		</where>
-	</select>
-
-	<!--根据条件查询总数-->
-	<select id="sumCount" resultType="int">
-		select count(*) from pc_image_check p
-		<where>
-			<if test="id != null and id != ''"> and id = #{id} </if>
-			<if test="acceptNo != null and acceptNo != ''"> and accept_no = #{acceptNo} </if>
-			<if test="customId != null and customId != ''"> and custom_id = #{customId} </if>
-			<if test="uploadIp != null and uploadIp != ''"> and upload_ip = #{uploadIp} </if>
-			<if test="uploadTime != null and uploadTime != ''"> and upload_time = #{uploadTime} </if>
-			<if test="imagePath != null and imagePath != ''"> and image_path = #{imagePath} </if>
-			<if test="imageName != null and imageName != ''"> and image_name = #{imageName} </if>
-			<if test="imageSize != null and imageSize != ''"> and image_size = #{imageSize} </if>
-			<if test="imageSpecial != null and imageSpecial != ''"> and image_special = #{imageSpecial} </if>
-			<if test="specialMsg != null and specialMsg != ''"> and special_msg = #{specialMsg} </if>
-			<if test="checkTypeId != null and checkTypeId != ''"> and check_type_id = #{checkTypeId} </if>
-			<if test="machineId != null and machineId != ''"> and machine_id = #{machineId} </if>
-			<if test="machineCheckTime != null and machineCheckTime != ''"> and machine_check_time = #{machineCheckTime} </if>
-			<if test="machineResult != null and machineResult != ''"> and machine_result = #{machineResult} </if>
-			<if test="machineCheckValue != null and machineCheckValue != ''"> and machine_check_value = #{machineCheckValue} </if>
-			<if test="machineResultMsg != null and machineResultMsg != ''"> and machine_result_msg = #{machineResultMsg} </if>
-			<if test="userCheckId != null and userCheckId != ''"> and user_check_id = #{userCheckId} </if>
-
-			<if test="userCheckBegin != null and userCheckBegin != ''">  and date_format(p.user_check_begin, '%Y-%m-%d') <![CDATA[ >= ]]>  date_format(#{userCheckBegin}, '%Y-%m-%d') </if>
-			<if test="userCheckEnd != null and userCheckEnd != ''">  and date_format(p.user_check_begin, '%Y-%m-%d') <![CDATA[ <= ]]> date_format(#{userCheckEnd}, '%Y-%m-%d') </if>
-			<if test="userCheckEnd != null and userCheckEnd != '' and userCheckBegin != null and userCheckBegin != ''">  and date_format(p.user_check_begin, '%Y-%m-%d') BETWEEN  date_format(#{userCheckBegin}, '%Y-%m-%d') AND date_format(#{userCheckEnd}, '%Y-%m-%d') </if>
-
-			<if test="userResult != null and userResult != ''"> and user_result = #{userResult} </if>
-			<if test="userResultMsg != null and userResultMsg != ''"> and user_result_msg like CONCAT('%', #{userResultMsg}, '%') </if>
-			<if test="finalResult != null and finalResult != ''"> and final_result = #{finalResult} </if>
-			<if test="dealStage != null and dealStage != ''"> and deal_stage = #{dealStage} </if>
-			<if test="createTime != null and createTime != ''"> and create_time = #{createTime} </if>
-			<if test="createUser != null and createUser != ''"> and create_user = #{createUser} </if>
-			<if test="updateTime != null and updateTime != ''"> and update_time = #{updateTime} </if>
-			<if test="updateUser != null and updateUser != ''"> and update_user = #{updateUser} </if>
-			<if test="remark != null and remark != ''"> and remark = #{remark} </if>
-		</where>
-		<choose>
-			<when test="sort != null and sort.trim() != ''">
-				order by ${sort} ${order}
-			</when>
-			<otherwise>
-				order by id desc
-			</otherwise>
-		</choose>
-		<if test="offset != null and limit != null">
-			limit #{offset}, #{limit}
-		</if>
 	</select>
 
 	<insert id="save" parameterType="com.bootdo.image_check.domain.ImageCheckDO">
