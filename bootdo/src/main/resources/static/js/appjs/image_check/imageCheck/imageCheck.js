@@ -388,7 +388,9 @@ function sum() {
             } else {
                 parent.layer.alert(data.msg)
             }*/
-            console.log("我是data" + data);
+
+            // console.log("我是data" + data);
+
             // 将 data 值赋给 id=sum 的 input即可
             $('#sum').val(data);
 

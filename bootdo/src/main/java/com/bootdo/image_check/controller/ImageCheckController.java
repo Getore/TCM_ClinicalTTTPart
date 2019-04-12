@@ -130,10 +130,10 @@ public class ImageCheckController {
 	@RequestMapping(value = "/sum")
 	public Double sum(@RequestParam Map<String, Object> params) throws Exception{
 		Query query = new Query(params);
-		int total = imageCheckService.sumCount(query);
-		Double sum = imageCheckService.sum(query);
-		double result = sum / total;
-		return result;
+//		int total = imageCheckService.sumCount(query);
+		double sum = imageCheckService.sum(query);
+//		double result = sum / total;
+		return sum;
 	}
 
 }

@@ -94,6 +94,14 @@
 			<if test="updateUser != null and updateUser != ''"> and update_user = #{updateUser} </if>
 			<if test="remark != null and remark != ''"> and remark = #{remark} </if>
 		</where>
+		<choose>
+			<when test="sort != null and sort.trim() != ''">
+				order by ${sort} ${order}
+			</when>
+			<otherwise>
+				order by id desc
+			</otherwise>
+		</choose>
 		<if test="offset != null and limit != null">
 			limit #{offset}, #{limit}
 		</if>
