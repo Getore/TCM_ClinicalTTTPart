@@ -22,8 +22,6 @@ public interface ImageCheckDao {
 	List<ImageCheckViewDO> list(Map<String,Object> map);
 
 	int count(Map<String,Object> map);
-
-	int sumCount(Map<String,Object> map);
 	
 	int save(ImageCheckDO imageCheck);
 	
