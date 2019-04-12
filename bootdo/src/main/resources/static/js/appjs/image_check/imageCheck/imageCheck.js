@@ -10,7 +10,7 @@ $(function() {
     $('#userCheckEnd').datepicker();
 
     // 总的用时平均时间
-    sum();
+    // sum();
 });
 
 function load() {
@@ -254,7 +254,9 @@ function load() {
 
                 ]
             });
+
     $('#exampleTable').bootstrapTable('refresh');
+    sum();
 }
 
 function BTOSlist() {
@@ -270,6 +272,7 @@ function STOBlist() {
 
 function reLoad() {
 	$('#exampleTable').bootstrapTable('refresh');	// 只是用来刷新，下一步就去入口了
+    sum();
 }
 
 function add() {
@@ -354,11 +357,23 @@ function batchRemove() {
 
 // 查询
 function sum() {
+    var params = {
+        // limit: params.limit,
+        // offset:params.offset,
+
+        // shenli - 准备条件项
+        userCheckId : $('#userCheckId').val(),
+        customId : $('#customId').val(),
+        userCheckBegin : $('#userCheckBegin').val(),
+        userCheckEnd : $('#userCheckEnd').val(),
+        finalResult : $('#finalResult').val(),
+        userResultMsg : $('#userResultMsg').val(),
+    };
     $.ajax({
         cache : true,
         type : "get",
         url : "/image_check/imageCheck/sum",
-        // data : $('#signupForm').serialize(),// 你的formid
+        data : params,      // 序列化提交表单
         async : false,
         /*error : function(request) {
             parent.layer.alert("Connection error");
@@ -373,7 +388,7 @@ function sum() {
             } else {
                 parent.layer.alert(data.msg)
             }*/
-
+            console.log("我是data" + data);
             // 将 data 值赋给 id=sum 的 input即可
             $('#sum').val(data);
 

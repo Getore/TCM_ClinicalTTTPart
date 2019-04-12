@@ -118,18 +118,20 @@ public class ImageCheckController {
 		return R.ok();
 	}
 
+
 	/**
 	 * shenli
 	 *
+	 * @param params
 	 * @return
 	 * @throws Exception
 	 */
 	@ResponseBody
 	@RequestMapping(value = "/sum")
-	public Double sum() throws Exception{
-		Map<String, Object> map = new HashMap<>();
-		int total = imageCheckService.count(map);
-		Double sum = imageCheckService.sum();
+	public Double sum(@RequestParam Map<String, Object> params) throws Exception{
+		Query query = new Query(params);
+		int total = imageCheckService.sumCount(query);
+		Double sum = imageCheckService.sum(query);
 		double result = sum / total;
 		return result;
 	}

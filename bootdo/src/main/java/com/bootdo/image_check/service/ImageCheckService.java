@@ -2,6 +2,7 @@ package com.bootdo.image_check.service;
 
 import com.bootdo.image_check.domain.ImageCheckDO;
 import com.bootdo.image_check.domain.ImageCheckViewDO;
+import org.springframework.web.bind.annotation.RequestParam;
 
 import java.util.List;
 import java.util.Map;
@@ -20,7 +21,9 @@ public interface ImageCheckService {
 	List<ImageCheckViewDO> list(Map<String, Object> map);
 
 	int count(Map<String, Object> map);
-	
+
+	int sumCount(Map<String, Object> map);
+
 	int save(ImageCheckDO imageCheck);
 	
 	int update(ImageCheckDO imageCheck);
@@ -29,5 +32,5 @@ public interface ImageCheckService {
 	
 	int batchRemove(Integer[] ids);
 
-	Double sum();
+	Double sum(Map<String, Object> map);
 }

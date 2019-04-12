@@ -32,7 +32,12 @@ public class ImageCheckServiceImpl implements ImageCheckService {
 	public int count(Map<String, Object> map){
 		return imageCheckDao.count(map);
 	}
-	
+
+	@Override
+	public int sumCount(Map<String, Object> map) {
+		return imageCheckDao.sumCount(map);
+	}
+
 	@Override
 	public int save(ImageCheckDO imageCheck){
 		return imageCheckDao.save(imageCheck);
@@ -54,8 +59,8 @@ public class ImageCheckServiceImpl implements ImageCheckService {
 	}
 
 	@Override
-	public Double sum() {
-		return imageCheckDao.sum();
+	public Double sum(Map<String, Object> map) {
+		return imageCheckDao.sum(map);
 	}
 
 }
